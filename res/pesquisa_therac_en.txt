@@ -1,0 +1,19 @@
+﻿                        Therac-25 Research
+
+The Therac-25 was a radiation therapy system used for cancer treatment 
+in the 1980s. In 1985, six incidents occurred involving the device, 
+resulting in three deaths and three other individuals suffering severe 
+injuries.
+
+These incidents were caused by failures in the Therac-25's software 
+system, which allowed the machine to emit lethal doses of radiation to 
+patients. The failures resulted from programming errors and a lack of 
+adequate error checking in the software.
+
+The Therac-25 incident was one of the earliest known cases of software 
+system failures leading to serious or fatal outcomes, serving as a 
+warning about the importance of safety in critical software systems.
+
+As a consequence, improvements were implemented in the way software 
+systems are developed and tested, including the addition of error 
+checks and other security measures.

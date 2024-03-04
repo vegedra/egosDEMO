@@ -4,7 +4,7 @@ import config as cfg
 
 def password():
     #blt.open()
-    blt.set(f"window.title='egOS - password.txt'; window.size=85x35") 
+    blt.set(f"window.title='egOS - Password'; window.size=85x35") 
     blt.color('#FFB000')
 
     cfg.game_state['enigma_pesquisa']  = 1
@@ -18,6 +18,7 @@ def logic():
         cfg.ascii_art('res/password.txt', 15, 4)
         blt.print(2, 33, '<- VOLTAR PARA O DESKTOP')
         blt.printf(12, 1, '<< SEGUNDA-FEIRA - 11 DE ABRIL, 1996 /')
+        blt.refresh()
 
         # Mostra a hora em tempo real
         if cfg.game_state['current_language'] == 'pt_BR':

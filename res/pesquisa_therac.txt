@@ -1,0 +1,20 @@
+﻿                        Pesquisa Therac-25
+
+O Therac-25 foi um sistema de radioterapia utilizado para o tratamento de 
+câncer na década de 1980. 
+Em 1985, ocorreram seis incidentes envolvendo o aparelho, que resultaram 
+em três mortes e outras três pessoas gravemente feridas.
+
+Os incidentes foram causados por falhas no sistema de software do 
+Therac-25, que permitia que o aparelho emitisse doses letais de radiação 
+para os pacientes. As falhas foram resultado de erros de programação e 
+de uma falta de verificação de erros adequada no software.
+
+O incidente Therac-25 foi um dos primeiros casos conhecidos de falhas em 
+sistemas de software que levaram a resultados graves ou fatais, e foi um 
+alerta para a importância da segurança em sistemas de software 
+críticos. 
+
+Como resultado, foram implementadas melhorias na maneira como os sistemas 
+de software são desenvolvidos e testados, incluindo a adição de 
+verificações de erros e outras medidas de segurança.

@@ -41,11 +41,11 @@ def logic():
             blt.color('#f4ce7c')
         else:
             blt.color('red')
-            blt.printf(17, 6,  "F")
-            blt.printf(6, 10,  "E")
-            blt.printf(10, 12, "N")
+            blt.printf(14, 7,  "F")
+            blt.printf(3, 10,  "E")
+            blt.printf(12, 13, "N")
             blt.printf(9, 14,  "I")
-            blt.printf(20, 26, "X")
+            blt.printf(17, 27, "X")
             blt.color('#f4ce7c')
         
         blt.refresh()

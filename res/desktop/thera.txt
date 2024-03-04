@@ -1,0 +1,25 @@
+﻿                            Pesquisa Thera-24
+
+
+O Thera-24 foi um sistema de radioterapia utilizado para o tratamento de 
+câncer na década de 1980 criado pela empresa LCL.
+
+Em 1985, ocorreram seis incidentes envolvendo o aparelho, que resultaram 
+em três mortes e outras três pessoas gravemente feridas.
+
+Os incidentes foram causados por falhas no sistema do Thera-24, que
+permitiram que o aparelho emitisse doses letais de radiação nos 
+pacientes. As falhas foram ocasionadas por erros de programação e 
+de uma falta de verificação de erros adequada no sistema.
+
+O incidente Thera-24 foi um dos primeiros casos conhecidos de falhas em 
+sistemas de computador que levaram a resultados graves ou fatais, e foi 
+um alerta para a importância da verificação em sistemas de computador 
+críticos. 
+
+Como resultado, foram implementadas melhorias na maneira como os sistemas 
+de computação são desenvolvidos e testados, incluindo a adição de 
+verificações de erros e outras medidas de segurança.
+
+Após sessões exaustivas no tribunal, que resultaram em uma multa 
+milionária, a empresa LCL acabou abrindo falência em 1988.

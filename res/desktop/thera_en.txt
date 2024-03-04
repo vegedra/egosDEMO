@@ -1,0 +1,24 @@
+﻿                              Thera-24 Research
+
+
+	   Thera-24 was a radiotherapy system used for the treatment of
+	   cancer in the 1980s created by the company LCL.
+
+	   In 1985, six incidents occurred involving the device, resulting
+	   in three deaths and three others seriously injured.
+
+	   The incidents were caused by failures in the Thera-24 system, which
+	   allowed the device to emit lethal doses of radiation into the
+	   patients. The failures were caused by programming errors and
+	   a lack of proper error checking in the system.
+
+	   The Thera-24 incident was one of the earliest known cases of failures
+	   in computer systems that led to serious or fatal outcomes, and it was
+	   a warning about the importance of verification in computer systems.
+
+	   As a result, improvements were implemented in the way systems
+	   of computing are developed and tested, including the addition of
+	   error checks and other security measures.
+
+	   After exhaustive court sessions, which resulted in a millionaire
+	   fine, LCL eventually filed for bankruptcy in 1988.

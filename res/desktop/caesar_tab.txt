@@ -1,0 +1,32 @@
+﻿
+╔══════════╦════════╗      
+║ ALFABETO ║ CAESAR ║ 
+╠══════════╬════════╣ 
+║     A    ║    D   ║   
+║     B    ║    E   ║  
+║     C    ║    F   ║   
+║     D    ║    G   ║   
+║     E    ║    H   ║    
+║     F    ║    I   ║    
+║     G    ║    J   ║    
+║     H    ║    K   ║    
+║     I    ║    L   ║    
+║     J    ║    M   ║    
+║     K    ║    N   ║   
+║     L    ║    O   ║    
+║     M    ║    P   ║    
+║     N    ║    Q   ║    
+║     O    ║    R   ║     A Cifra de César é um
+║     P    ║    S   ║     sistema de substituição
+║     Q    ║    T   ║     onde cada letra da mensagem
+║     R    ║    U   ║     que se quer criptografada
+║     S    ║    V   ║     é trocada pela letra 3
+║     T    ║    W   ║     vezes à sua frente no alfabeto.
+║     U    ║    X   ║     Acredita-se que por se chamar
+║     V    ║    Y   ║     Cifra de César, pressupõe-se
+║     W    ║    Z   ║     que tenha sido Julio Cesar quem  
+║     X    ║    A   ║     a inventou.
+║     Y    ║    B   ║     
+║     Z    ║    C   ║     Eu tenho minhas dúvidas...
+╚══════════╩════════╝
+

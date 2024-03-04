@@ -1,0 +1,29 @@
+﻿                        Usage Instructions: egOS & EGO++
+
+egOS is the Operating System used by machines created by EgoCorp.
+
+EGO++ are the types of commands used in the system terminal, allowing
+manipulating it, opening or searching for files, and other functionalities.
+
+Press SPACE to activate the terminal interface and type CLOSE to close it.
+
+                     Some of the most important commands:
+
+        SYSTEM - Displays information and system status;
+
+        OPEN - Opens the specified program or file;
+               Example: "OPEN EGOTEXT.EXE"
+
+        CLOSE - Closes the EGO++ interface;
+    
+        FIND - Searches for files on the machine based on a name and opens them.
+                Example: "FIND arquivo.txt"
+                
+        OVERWRITE - Allows merging elements from one file into another.    
+                Example: "OVERWRITE arquivo1.txt arquivo2.txt"
+                
+        HELP - Accesses the manual from anywhere in the system.
+               
+             01110010 01101111 01110000 01110010 01101001 01100101 
+             01100100 01100001 01100100 01100101 01110011 00100000 
+              

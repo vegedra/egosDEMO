@@ -1,0 +1,29 @@
+﻿                        ---- egOS SYSTEM v2.2 ----
+      ---- EGOCORP (c) 1992-1996 - TODOS OS DIREITOS RESERVADOS ----
+                      --- RECONECTANDO AO SISTEMA ---
+                       ----- CONEXÃO RESTAURADA ----
+
+
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ MENU ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ ┌────────▓DOCUMENTOS▓────────────▓OUTROS▓────────────▓PROGRAMAS▓────────┐
+ │                                                                       │
+ │       (P)Pesquisa.txt         (M)MANUAL           ( )                 │
+ │                                                   (E)EGOTEXT.exe      │
+ │                                                                       │
+ │                                                                       │
+ │                                                                       │
+ │                                                                       │
+ │                                                                       │
+ │                                                                       │
+ │                                                                       │
+ │                                                                       │
+ │                                                                       │
+ │                                                                       │
+ │                                                                       │
+ │                                                                       │
+ │                                                                       │
+ │                                                                       │
+ │                                                                       │
+ └───────────────────────────────────────────────────────────────────────┘
+
