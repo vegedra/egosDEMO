@@ -6,6 +6,12 @@ import random
 import sys
 import language
 
+# *****************************************
+#               egOS: Cybercrime
+# JOGO DE PEDRO IVO, 2024
+# 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
+# *****************************************
+
 # Abre o blt e o configura: se pode ser arrastado, o titulo da janela e de onde vem o input
 blt.open()
 blt.set("""

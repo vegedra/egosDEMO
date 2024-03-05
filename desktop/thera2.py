@@ -31,13 +31,13 @@ def logic():
         
         if cfg.game_state['current_language'] == 'en': 
             blt.color('red')
-            blt.printf(17, 6,  "P")
-            blt.printf(6, 10,  "H")
-            blt.printf(10, 12, "O")
-            blt.printf(9, 14,  "E")
-            blt.printf(20, 26, "N")
-            blt.printf(20, 26, "I")
-            blt.printf(20, 26, "X")
+            blt.printf(35, 7,  "P")
+            blt.printf(42, 8,  "H")
+            blt.printf(33, 10, "O")
+            blt.printf(12, 13,  "E")
+            blt.printf(15, 15, "N")
+            blt.printf(23, 18, "I")
+            blt.printf(17, 26, "X")
             blt.color('#f4ce7c')
         else:
             blt.color('red')
