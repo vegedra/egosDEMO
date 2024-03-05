@@ -42,22 +42,28 @@ def clear_input_queue():
         blt.read()
 
 def play_music(file_path, volume=0.8, loop=-1, crossfade_duration=2000):
-    # If music is already playing, crossfade to the new track
-    mixer.init()
-    if mixer.music.get_busy():
-        mixer.music.fadeout(crossfade_duration)  # Fade out the current track
-        blt.delay(crossfade_duration)     # Wait for the fadeout to complete
-    mixer.music.stop()
-    mixer.music.load(file_path)
-    mixer.music.set_volume(volume)
-    mixer.music.play(loop)
+    try:
+        # If music is already playing, crossfade to the new track
+        mixer.init()
+        if mixer.music.get_busy():
+            mixer.music.fadeout(crossfade_duration)  # Fade out the current track
+            blt.delay(crossfade_duration)     # Wait for the fadeout to complete
+        mixer.music.stop()
+        mixer.music.load(file_path)
+        mixer.music.set_volume(volume)
+        mixer.music.play(loop)
+    except:
+        print('ERRO: Veriique se o arquivo existe.')
     
 def play_sound(file_path, volume=0.6, loop=-1):
-    # Quase a mesma coisa que o play_music só que pra som
-    mixer.init()
-    sound = mixer.Sound(file_path) 
-    sound.set_volume(volume)
-    sound.play(loops=loop)
+    try:
+        # Quase a mesma coisa que o play_music só que pra som
+        mixer.init()
+        sound = mixer.Sound(file_path) 
+        sound.set_volume(volume)
+        sound.play(loops=loop)
+    except:
+        print('ERRO: Veriique se o arquivo existe.')
 
 def relogio(x, y):
     # Define as variaveis para mostrar a hora em tempo real

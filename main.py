@@ -52,7 +52,7 @@ while True:
 #intro()
 
 # Musica usando o Mixer do Pygame
-cfg.play_music('bgm/menu.ogg', volume=0.6, loop=-1, crossfade_duration=2000)
+cfg.play_music('bgm/men2u.ogg', volume=0.6, loop=-1, crossfade_duration=2000)
 
 def main_menu():
     blt.set("""
