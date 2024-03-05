@@ -9,7 +9,7 @@ import language
 # *****************************************
 #               egOS: Cybercrime
 # JOGO DE PEDRO IVO, 2024
-# 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
+# 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
 # *****************************************
 
 # Abre o blt e o configura: se pode ser arrastado, o titulo da janela e de onde vem o input
