@@ -119,7 +119,7 @@ def ego_code():
                 message(delay_time=800)
                 ego_code()
                 
-            case "overwrite pesquisa.txt password.txt" | 'overwrite pesquisa password' | "overwrite probation.txt password.txt" | 'overwrite probation password':
+            case "overwrite pesquisa.txt password.txt" | 'overwrite pesquisa password' | "overwrite probing.txt password.txt" | 'overwrite probing password':
                 language.get_localized_text('terminal10', section='terminal', color="#FFB000")
                 message(delay_time=1000)
                 mixer.music.fadeout(200)
