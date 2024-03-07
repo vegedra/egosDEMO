@@ -83,6 +83,7 @@ def main_menu():
     language.get_localized_text('menu6', section='menu', color="#fff4e6")
     language.get_localized_text('menu7', section='menu', color="#fff4e6")
     language.get_localized_text('menu8', section='menu', color="#fff4e6")
+    blt.printf(31, 3, " ")
     blt.refresh()
 
     logic()
