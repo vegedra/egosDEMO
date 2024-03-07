@@ -29,9 +29,9 @@ def logic():
         blt.refresh()
 
         if blt.has_input():
-            key = blt.read()
+            cfg.egotext_input()
 
-            if key == blt.TK_ENTER:
+            if cfg.key == blt.TK_ENTER:
                 blt.print(22, 27, "> ")
                 rc, clima = blt.read_str(23, 27, "", 20)
 
@@ -67,7 +67,7 @@ def logic():
                     blt.clear()
                     esfinge_A()
 
-            elif key == blt.TK_LEFT:
+            elif cfg.key == blt.TK_LEFT:
                 cfg.play_sound('sfx/sound_menu_close.ogg', volume=0.5, loop = 0)  
                 blt.color('white')
                 blt.bkcolor('black')
@@ -76,7 +76,7 @@ def logic():
                 blt.clear()
                 art()
 
-            elif key == blt.TK_RIGHT:
+            elif cfg.key == blt.TK_RIGHT:
                 import config as cfg
                 if cfg.game_state['finaldemo'] == 1:
                     cfg.play_sound('sfx/sound_menu_close.ogg', volume=0.5, loop = 0)  
@@ -88,37 +88,6 @@ def logic():
                     esfinge_C()
                 else:
                     esfinge_A()
-
-            elif key == blt.TK_S:
-                blt.color('white')
-                blt.bkcolor('black')
-                blt.refresh()
-                cfg.play_sound('sfx/sound_menu_open.ogg', volume=0.5, loop = 0)  
-                from pages.search import match_pages
-                match_pages()
-
-            elif key == blt.TK_SPACE:
-                # Abre o EGO++
-                blt.refresh()
-                cfg.play_sound('sfx/sound_menu_open.ogg', volume=0.5, loop = 0)  
-                from desktop.terminal import ego_code
-                ego_code()
-
-            elif key == blt.TK_ESCAPE:      
-                cfg.play_sound('sfx/sound_menu_close.ogg', volume=0.5, loop = 0)  
-                from desktop.desktop import terminal
-                blt.clear()
-                terminal()
-
-            elif key == blt.TK_CLOSE:    
-                cfg.play_sound('sfx/sound_menu_close.ogg', volume=0.5, loop = 0)    
-                from exit_confirmation import main
-                main()    
-
-            elif key == blt.TK_F4:
-                cfg.play_sound('sfx/sound_menu_close.ogg', volume=0.5, loop = 0)  
-                from config import toggle_fullscreen
-                toggle_fullscreen()
 
             else:
                 logic()  

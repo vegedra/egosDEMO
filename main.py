@@ -8,7 +8,7 @@ import language
 
 # *****************************************
 #               egOS: Cybercrime
-# JOGO DE PEDRO IVO, 2024
+#           JOGO DE PEDRO IVO, 2024
 # *****************************************
 
 # Abre o blt e o configura: se pode ser arrastado, o titulo da janela e de onde vem o input
@@ -47,8 +47,7 @@ while True:
     # Limpa a fila de input
     cfg.clear_input_queue()
 
-#TIRA O # QUANDO FOR EXPORTAR!!!!! V V V 
-#intro()
+intro()
 
 # Musica usando o Mixer do Pygame
 cfg.play_music('bgm/menu.ogg', volume=0.6, loop=-1, crossfade_duration=2000)
@@ -124,7 +123,7 @@ def logic():
                 blt.print(1, 1, " ")
                 blt.print(1, 1, " ")
                 blt.refresh()
-                blt.delay(1000)
+                blt.delay(1500)
 
                 # Frame 2
                 blt.clear()
@@ -171,12 +170,6 @@ def logic():
             # Ativar a tela-cheia
             elif key == blt.TK_F4:
                 cfg.toggle_fullscreen()
-
-            # DEBUG - REMOVE DEPOIS
-            elif key == blt.TK_8:
-                cfg.clear_input_queue()
-                from desktop.desktop import terminal
-                terminal()
 
             # Sair
             elif key in (blt.TK_CLOSE, blt.TK_5, blt.TK_ESCAPE):     

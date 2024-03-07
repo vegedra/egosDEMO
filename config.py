@@ -86,13 +86,54 @@ def ascii_art(file_path, x, y):
         with open(file_path, 'r', encoding="utf-8") as file:
             content = file.read()
             blt.printf(x, y, content)
-            blt.printf(x, y, " ")
+            blt.printf(x-1, y, " ")
     except UnicodeDecodeError:
         try:
             # If UTF-8 decoding fails, try ANSI decoding
             with open(file_path, 'r', encoding="ansi") as file:
                 content = file.read()
                 blt.printf(x, y, content)
-                blt.printf(x, y, " ")
+                blt.printf(x-1, y, " ")
         except UnicodeDecodeError:
             print("Error: Unable to decode the file. Make sure it is saved in either UTF-8 or ANSI encoding.")
+
+def egotext_input():
+    global key
+    key = blt.read()
+
+    if key == blt.TK_S:
+        blt.color('white')
+        blt.bkcolor('black')
+        play_sound('sfx/sound_menu_close.ogg', volume=0.5, loop = 0)
+        from pages.search import match_pages
+        clear_input_queue()
+        match_pages()
+
+    elif key == blt.TK_ESCAPE:   
+        play_sound('sfx/sound_menu_close.ogg', volume=0.5, loop = 0)   
+        mixer.music.fadeout(1000)
+        from desktop.desktop import terminal
+        blt.clear()
+        clear_input_queue()
+        terminal()
+
+    elif key == blt.TK_SPACE:
+        # Abre o EGO++
+        blt.refresh()
+        play_sound('sfx/sound_menu_close.ogg', volume=0.5, loop = 0)
+        from desktop.terminal import ego_code
+        clear_input_queue()
+        ego_code()
+
+    elif key == blt.TK_CLOSE:   
+        play_sound('sfx/sound_menu_close.ogg', volume=0.5, loop = 0)   
+        mixer.music.fadeout(1000)
+        from exit_confirmation import main
+        clear_input_queue()
+        main()   
+
+    elif key == blt.TK_F4:
+        play_sound('sfx/sound_menu_close.ogg', volume=0.5, loop = 0)
+        from config import toggle_fullscreen
+        clear_input_queue()
+        toggle_fullscreen()

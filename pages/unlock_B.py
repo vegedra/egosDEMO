@@ -38,15 +38,16 @@ def logic():
         # Verifica se o usuario apertou alguma tecla e a lê
         if blt.has_input():
 
-            key = blt.read()
+            cfg.egotext_input()
 
-            if key == blt.TK_ENTER:
+            if cfg.key == blt.TK_ENTER:
                 blt.color('yellow')
                 blt.print(15, 10, "> ")
                 rc, senha = blt.read_str(17, 10, "", 20)
 
                 # Se acertou:
-                if (senha == "fenix" or senha == "FENIX"):
+                #if (senha == "fenix" or senha == "FENIX"):
+                if senha.lower() == "fenix" or senha.lower() == "phoenix":
                     blt.print(15, 13, "SENHA CORRETA.")
                     blt.refresh()
                     blt.delay(1000)
@@ -64,7 +65,7 @@ def logic():
                     cfg.clear_input_queue()
                     erroo()
     
-            elif key == blt.TK_LEFT:
+            elif cfg.key == blt.TK_LEFT:
                     cfg.play_sound('sfx/sound_menu_close.ogg', volume=0.5, loop = 0)
                     blt.refresh()
                     from pages.gflex import gflex
@@ -72,44 +73,12 @@ def logic():
                     cfg.clear_input_queue()
                     gflex()
 
-            elif key == blt.TK_RIGHT:
+            elif cfg.key == blt.TK_RIGHT:
                 cfg.play_sound('sfx/sound_menu_close.ogg', volume=0.5, loop = 0)
                 from pages.welcome import saudacao
                 blt.clear()
                 cfg.clear_input_queue()
                 saudacao()
-
-            elif key == blt.TK_S:
-                cfg.play_sound('sfx/sound_menu_close.ogg', volume=0.5, loop = 0)
-                from pages.search import match_pages
-                cfg.clear_input_queue()
-                match_pages()
-
-            elif key == blt.TK_ESCAPE:     
-                cfg.play_sound('sfx/sound_menu_close.ogg', volume=0.5, loop = 0) 
-                from desktop.desktop import terminal
-                cfg.clear_input_queue()
-                terminal()
-
-            elif key == blt.TK_SPACE:
-                # Abre o EGO++
-                blt.refresh()
-                cfg.play_sound('sfx/sound_menu_close.ogg', volume=0.5, loop = 0)
-                from desktop.terminal import ego_code
-                cfg.clear_input_queue()
-                ego_code()
-
-            elif key == blt.TK_CLOSE:      
-                cfg.play_sound('sfx/sound_menu_close.ogg', volume=0.5, loop = 0)
-                from exit_confirmation import main
-                cfg.clear_input_queue()
-                main()      
-
-            elif key == blt.TK_F4:
-                cfg.play_sound('sfx/sound_menu_close.ogg', volume=0.5, loop = 0)
-                from config import toggle_fullscreen
-                cfg.clear_input_queue()
-                toggle_fullscreen()
 
             else:
                 cfg.clear_input_queue()

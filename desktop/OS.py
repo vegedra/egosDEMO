@@ -102,9 +102,8 @@ def logic():
                 rc, password = blt.read_str(72, 14, "", 4)
                 blt.printf(72, 14, "" + password)
 
-            # Se acertou:     ARRUMA AQUI DEPOIS: DEBUG
-            #if username == "hubriston" and (password == "1104" or password == "0411"):
-            if username == "a" and (password == "a" or password == "0411"):
+            # Se acertou: 
+            if username == "hubriston" and (password == "1104" or password == "0411"):
                 language.get_localized_text('login6', section='login', color="#FFB000")
                 blt.refresh()
                 blt.delay(1000)

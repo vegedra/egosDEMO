@@ -1,7 +1,7 @@
 from bearlibterminal import terminal as blt
-import config as cfg
 
 def match_pages():
+    import config as cfg
     blt.color('#d6945e')
 
     # Area que o jogador pode inserir a página que deseja ir

@@ -22,9 +22,9 @@ def logic():
         blt.refresh()
 
         if blt.has_input():
-            key = blt.read()
+            cfg.egotext_input()
 
-            if key == blt.TK_LEFT:
+            if cfg.key == blt.TK_LEFT:
                 cfg.play_sound('sfx/sound_menu_close.ogg', volume=0.5, loop = 0)   
                 blt.color('white')
                 blt.bkcolor('black')
@@ -32,37 +32,6 @@ def logic():
                 from pages.esfinge_A import esfinge_A
                 blt.clear()
                 esfinge_A()
-
-            elif key == blt.TK_S:
-                blt.color('white')
-                blt.bkcolor('black')
-                blt.refresh()
-                cfg.play_sound('sfx/sound_menu_open.ogg', volume=0.5, loop = 0)
-                from pages.search import match_pages
-                match_pages()
-
-            elif key in (blt.TK_ESCAPE, blt.TK_LEFT):  
-                cfg.play_sound('sfx/sound_menu_close.ogg', volume=0.5, loop = 0)    
-                from desktop.desktop import terminal
-                blt.clear()
-                terminal()
-
-            elif key == blt.TK_SPACE:
-                # Abre o EGO++
-                blt.refresh()
-                cfg.play_sound('sfx/sound_menu_open.ogg', volume=0.5, loop = 0)
-                from desktop.terminal import ego_code
-                ego_code()
-
-            elif key == blt.TK_CLOSE:    
-                cfg.play_sound('sfx/sound_menu_close.ogg', volume=0.5, loop = 0) 
-                from exit_confirmation import main
-                main()    
-
-            elif key == blt.TK_F4:
-                cfg.play_sound('sfx/sound_menu_close.ogg', volume=0.5, loop = 0) 
-                from config import toggle_fullscreen
-                toggle_fullscreen()
 
             else:
                 logic()  

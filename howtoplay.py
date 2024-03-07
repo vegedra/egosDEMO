@@ -72,6 +72,7 @@ def tutorial():
         language.get_localized_text('intro7', section='howtoplay')
         
     blt.refresh()
+    sair()
     
     if cfg.game_state['current_language'] == 'pt_BR':
         blt.delay(2000)
@@ -90,6 +91,7 @@ def tutorial():
     blt.clear()
     blt.print(7, 2, '' + tv)
     blt.refresh()
+    sair()
     language.get_localized_text('intro1', section='howtoplay', color="#3d3d08")
     language.get_localized_text('intro2', section='howtoplay', color ="gray")
     language.get_localized_text('intro3', section='howtoplay', color ="gray")
