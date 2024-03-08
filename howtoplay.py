@@ -8,7 +8,6 @@ def sair():
         # Check for the exit key
         key = blt.read()
         if key in (blt.TK_CLOSE, blt.TK_5, blt.TK_ESCAPE):
-            cfg.sound.mixer.stop()
             cfg.clear_input_queue()
             blt.clear()
             from main import main_menu

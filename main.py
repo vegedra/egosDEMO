@@ -47,7 +47,8 @@ while True:
     # Limpa a fila de input
     cfg.clear_input_queue()
 
-intro()
+# DEBUG
+#intro()
 
 # Musica usando o Mixer do Pygame
 cfg.play_music('bgm/menu.ogg', volume=0.6, loop=-1, crossfade_duration=2000)
@@ -67,7 +68,7 @@ def main_menu():
     # Pega a arte do arquivo .txt e printa na tela
     cfg.ascii_art('res/novo_menu.txt', 32, 3)
     # Vai ter que colocar esse print caso tenha caractere ANSI
-    blt.printf(32, 3, " ")
+    #blt.printf(32, 3, " ") nao sei se precisa, no pc da faculdade n aparece o simbolo estranho
     
     blt.print(50,19, '[COLOR:(#6fcb9f]--            --[/COLOR]')
     blt.print(56,21, '[COLOR:(#6fcb9f]DEMO[/COLOR]')
@@ -167,6 +168,13 @@ def logic():
                 blt.clear()
                 from options import options
                 options()
+            
+            # DEBUG
+            elif key == blt.TK_8:
+                cfg.play_sound('sfx/sound_menu_close.ogg', volume=0.5, loop = 0)
+                blt.clear()
+                from desktop.desktop import terminal
+                terminal()
 
             # Ativar a tela-cheia
             elif key == blt.TK_F4:

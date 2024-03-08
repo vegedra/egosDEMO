@@ -84,18 +84,18 @@ def relogio(x, y):
 
 def ascii_art(file_path, x, y):
     try:
-        # Attempt to read the file as UTF-8
+        # Tenta ler o arquivo .txt como UTF-8
         with open(file_path, 'r', encoding="utf-8") as file:
             content = file.read()
             blt.printf(x, y, content)
-            blt.printf(x-1, y, " ")
+            blt.printf(x, y, " ")
     except UnicodeDecodeError:
         try:
-            # If UTF-8 decoding fails, try ANSI decoding
+            # se nao for UTF-8 tenta com ANSI
             with open(file_path, 'r', encoding="ansi") as file:
                 content = file.read()
                 blt.printf(x, y, content)
-                blt.printf(x-1, y, " ")
+                blt.printf(x, y, " ")
         except UnicodeDecodeError:
             print("Error: Unable to decode the file. Make sure it is saved in either UTF-8 or ANSI encoding.")
 

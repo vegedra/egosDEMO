@@ -2,6 +2,7 @@ from bearlibterminal import terminal as blt
 from pygame import mixer
 import time
 import config as cfg
+import language
 
 cfg.play_music('bgm/egotext_loop1.ogg', volume=0.8, loop=-1, crossfade_duration=10)
 cfg.play_sound('bgm/computer_noise_loop.ogg', volume=0.2, loop=-1)
@@ -30,8 +31,8 @@ def logic():
         blt.printf(3, 10, '[color=#5d6f87]Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y[/color]')
 
         blt.printf(3, 11, '[color=#ececec]Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y[/color]')
-        blt.printf(3, 12, '[color=#bad7ff]Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y[/color]')
-        blt.printf(3, 13, '[color=#96b4dd]Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉ BEM-VINDO(A) AO EGOTEXT ▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y[/color]')
+        blt.printf(3, 12, '[color=#bad7ff]Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y[/color]')  
+        language.get_localized_text('welcome1', section='egotext', color="#96b4dd")
         blt.printf(3, 14, '[color=#708db4]Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y[/color]')
     
 
@@ -51,22 +52,20 @@ def logic():
         blt.printf(3, 27, '[color=#bad7ff]Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y[/color]')
         blt.printf(3, 28, '[color=#96b4dd]Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y[/color]')
         blt.printf(3, 29, '[color=#708db4]Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y[/color]')
-        blt.printf(3, 30, '[color=#5d6f87]Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉ PRESSIONE ESC PARA VOLTAR AO DESKTOP! ▉Y▉Y▉Y▉Y▉Y▉Y▉Y[/color]')
+        language.get_localized_text('welcome2', section='egotext', color="#5d6f87") 
         blt.printf(3, 31, '[color=#ececec]Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y[/color]')
 
-        blt.color('#d6945e')
-        blt.print(15, 33, "<--- USE AS SETAS DO TECLADO PARA NAVEGAR ---> ")
-        blt.print(12, 34, "APERTE 'S' PARA PESQUISAR POR UMA PÁGINA ESPECÍFICA ")
+        language.get_localized_text('welcome3', section='egotext', color="#d6945e") 
+        language.get_localized_text('welcome4', section='egotext', color="#d6945e") 
         blt.puts(1, 33, " " * 10)
         blt.refresh()
 
 
         blt.printf(3, 15, '[color=#5d6f87]Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y[/color]')
-        blt.printf(6, 0, '[color=#695bd4]EGOTEXT   << 100 >>   SEGUNDA-FEIRA - 11 DE ABRIL, 1996  22:13h[/color]')
+        language.get_localized_text('welcome5', section='egotext', color="#695bd4") 
         if time.time() % frequency < frequency / 2:
-          blt.color('#5d6f87')
-          blt.printf(3, 15, "[color=#5d6f87]Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉ TE DEIXANDO ATUALIZADO(A) BYTE A BYTE ▉Y▉Y▉Y▉Y▉Y▉Y▉Y[/color]")
-          blt.printf(6, 0, "[color=#695bd4]EGOTEXT   << 100 >>   SEGUNDA-FEIRA - 11 DE ABRIL, 1996  22:14h[/color]")
+          language.get_localized_text('welcome7', section='egotext', color="#5d6f87") 
+          language.get_localized_text('welcome6', section='egotext', color="#695bd4") 
         blt.refresh()
 
         # Verifica se o usuario apertou alguma tecla e a lê

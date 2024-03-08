@@ -4,11 +4,11 @@ import language
 from pygame import mixer
 import config as cfg
 from howtoplay import sair as sair
-
+    
 def os():
     blt.set(f"window.title='egOS - Login'; window.size=85x35")
     blt.clear()
-     
+    
     # Som de computador antigo
     cfg.play_sound('bgm/computer_noise_loop.ogg', volume=0.4, loop=-1)
     
@@ -34,22 +34,18 @@ def os():
     language.get_localized_text('desk1', section='desktop', color="#ffb000")
     language.get_localized_text('desk2', section='desktop', color="#ffb000")
     blt.refresh()
-    sair()
     blt.delay(1500)
     language.get_localized_text('login9', section='login', color="#ffb000")
     blt.refresh()
-    sair()
     blt.delay(1500)
     language.get_localized_text('login10', section='login', color="#ffb000")
     blt.refresh()
-    sair()
     blt.delay(500)
     cfg.play_sound('sfx/sound_menu_open.ogg', volume=0.5, loop = 0)
     cfg.ascii_art('res/logo_egocorp.txt', 22, 8)
     blt.printf(62, 8, '®️')
     blt.printf(63, 8, " ")
     blt.refresh()
-    sair()
     blt.delay(2500)
     cfg.clear_input_queue()
 

@@ -40,7 +40,10 @@ def intro():
 
         while True:
             blt.delay(500)
-            blt.print(12, 15, "INICIALIZANDO HOOBLER.EXE")
+            if cfg.game_state['current_language'] == 'en': 
+                blt.print(14, 15, "STARTING HOOBLER.EXE")
+            else:
+                blt.print(12, 15, "INICIALIZANDO HOOBLER.EXE")
             blt.refresh()
             blt.delay(2000)
             from hoobler.hoobler1 import hoobler
