@@ -1,13 +1,14 @@
 from bearlibterminal import terminal as blt
 import config as cfg
 import language
+from pygame import mixer
 
 def sair():
     if blt.has_input():
         # Check for the exit key
         key = blt.read()
         if key in (blt.TK_CLOSE, blt.TK_5, blt.TK_ESCAPE):
-            cfg.play_sound('sfx/sound_menu_close.ogg', volume=0.5, loop = 0)
+            cfg.sound.mixer.stop()
             cfg.clear_input_queue()
             blt.clear()
             from main import main_menu

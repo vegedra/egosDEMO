@@ -52,8 +52,8 @@ def play_music(file_path, volume=0.8, loop=-1, crossfade_duration=2000):
         mixer.music.load(file_path)
         mixer.music.set_volume(volume)
         mixer.music.play(loop)
-    except:
-        print('ERRO: Veriique se o arquivo existe.')
+    except Exception as e:
+        print(repr(e))
     
 def play_sound(file_path, volume=0.6, loop=-1):
     try:
@@ -62,8 +62,10 @@ def play_sound(file_path, volume=0.6, loop=-1):
         sound = mixer.Sound(file_path) 
         sound.set_volume(volume)
         sound.play(loops=loop)
-    except:
-        print('ERRO: Veriique se o arquivo existe.')
+        return sound
+    except Exception as e:
+        print(repr(e))
+        return None
 
 def relogio(x, y):
     # Define as variaveis para mostrar a hora em tempo real

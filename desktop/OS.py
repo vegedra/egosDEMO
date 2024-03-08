@@ -3,13 +3,28 @@ import random
 import language
 from pygame import mixer
 import config as cfg
+from howtoplay import sair as sair
 
 def os():
     blt.set(f"window.title='egOS - Login'; window.size=85x35")
     blt.clear()
-
+     
     # Som de computador antigo
     cfg.play_sound('bgm/computer_noise_loop.ogg', volume=0.4, loop=-1)
+    
+    # Resetando o valor das variavel no config pra um new game
+    cfg.game_state['enigma_esfingeA'] = 0
+    cfg.game_state['manualEGO'] = 0
+    cfg.game_state['viu_99'] = 0
+    cfg.game_state['fun_factor'] = 0
+    cfg.game_state['enigma_pesquisa'] = 0
+    cfg.game_state['manual_2'] = 0
+    cfg.game_state['telehill'] = 0
+    cfg.game_state['finaldemo'] = 0
+    cfg.game_state['666'] = 0
+    cfg.game_state['find_password'] = 0
+    cfg.game_state['trato_hoobler'] = 0
+    cfg.game_state['options_toDesktop'] = 0
 
     # Código que gera o valor Fun Factor
     fun_factor_random = random.randint(1, 5)
@@ -19,18 +34,22 @@ def os():
     language.get_localized_text('desk1', section='desktop', color="#ffb000")
     language.get_localized_text('desk2', section='desktop', color="#ffb000")
     blt.refresh()
+    sair()
     blt.delay(1500)
     language.get_localized_text('login9', section='login', color="#ffb000")
     blt.refresh()
+    sair()
     blt.delay(1500)
     language.get_localized_text('login10', section='login', color="#ffb000")
     blt.refresh()
+    sair()
     blt.delay(500)
     cfg.play_sound('sfx/sound_menu_open.ogg', volume=0.5, loop = 0)
     cfg.ascii_art('res/logo_egocorp.txt', 22, 8)
     blt.printf(62, 8, '®️')
     blt.printf(63, 8, " ")
     blt.refresh()
+    sair()
     blt.delay(2500)
     cfg.clear_input_queue()
 
