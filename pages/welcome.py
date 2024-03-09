@@ -52,6 +52,7 @@ def logic():
         blt.printf(3, 27, '[color=#bad7ff]Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y[/color]')
         blt.printf(3, 28, '[color=#96b4dd]Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y[/color]')
         blt.printf(3, 29, '[color=#708db4]Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y[/color]')
+        blt.printf(3, 30, '[color=#5d6f87]Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y[/color]')
         language.get_localized_text('welcome2', section='egotext', color="#5d6f87") 
         blt.printf(3, 31, '[color=#ececec]Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y[/color]')
 

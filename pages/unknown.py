@@ -1,6 +1,7 @@
 from bearlibterminal import terminal as blt
 from pygame import mixer
 import config as cfg
+import language
 
 def espaco():
     blt.set('window.size=75x35')
@@ -12,7 +13,8 @@ def espaco():
 def logic():
     while True:
         blt.color('#FFF8E7') 
-        blt.printf(6, 0, 'EGOTEXT   << 999 >>   SEGUNDA-FEIRA - 11 DE ABRIL, 1996  22:13h')
+        language.get_localized_text('welcome5', section='egotext', color="#FFF8E7") 
+        blt.printf(20, 0, '999')
         cfg.ascii_art('res/egotext/space.txt', 0, 2)
         blt.refresh()
 

@@ -1,6 +1,7 @@
 from bearlibterminal import terminal as blt
 from pygame import mixer
 import config as cfg
+import language
 
 def olho():
     blt.set('window.size=75x35')
@@ -13,10 +14,12 @@ def logic():
         cfg.ascii_art('res/egotext/olho1.txt', 5, 4)
         blt.printf(5, 4, '@')
 
-        blt.printf(6, 0, '[color=#f0e046]EGOTEXT   << 102 >>   SEGUNDA-FEIRA - 11 DE ABRIL, 1996  22:13h[/color]')
-        blt.printf(26, 2, '[color=#f0e046]UM FILME DE ETHAN ZACHARY[/color]')
-        blt.printf(35, 32, 'O Olho')
-        blt.printf(34, 33, '[color=#f0e046]Em breve...[/color]')
+        language.get_localized_text('welcome5', section='egotext', color="#f0e046") 
+        blt.printf(19, 0, '[color=#f0e046]102[/color]')
+
+        language.get_localized_text('adfilme1', section='egotext', color="#f0e046") 
+        language.get_localized_text('adfilme2', section='egotext', color='#f20505')
+        language.get_localized_text('adfilme3', section='egotext', color="#f0e046") 
         blt.puts(1, 33, " " * 30)
         blt.refresh()
 

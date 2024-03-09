@@ -1,6 +1,7 @@
 from bearlibterminal import terminal as blt
 from pygame import mixer
 import config as cfg
+import language
 
 def resposta():
     blt.set('window.size=75x35')
@@ -10,8 +11,10 @@ def resposta():
 def logic():
     while True:
         blt.color('#C1E3ED') 
-        blt.printf(6, 0, 'EGOTEXT   << 42 >>   SEGUNDA-FEIRA - 11 DE ABRIL, 1996  22:13h')
-        blt.printf(10, 13, "Sim, essa é a resposta.")
+        language.get_localized_text('welcome5', section='egotext', color="#C1E3ED") 
+        blt.printf(20, 0, '42')
+
+        language.get_localized_text('hitchhiker', section='egotext', color="#C1E3ED") 
         blt.puts(1, 33, " " * 70)
         blt.refresh()
 

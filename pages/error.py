@@ -2,12 +2,14 @@ from bearlibterminal import terminal as blt
 from pygame import mixer
 from itertools import cycle
 import config as cfg
+import language
 
 def erro():
     #blt.open()
     blt.set('window.size=75x20')
     blt.color('black')
-    blt.printf(6, 0, '[color=yellow]EGOTEXT   << 0 >>   SEGUNDA-FEIRA - 11 DE ABRIL, 1996  22:13h[/color]')
+    language.get_localized_text('welcome5', section='egotext', color="yellow") 
+    blt.printf(20, 0, '[color=yellow]0[/color]')
 
     blt.printf(12, 4, '[color=#ff71ce]       ___   ___   ________  ____   ___        [/color]')
     blt.printf(12, 5, '[color=#01cdfe]      |\  \ |\  \ /\   __  \|\   \ |\  \       [/color]')
@@ -17,7 +19,7 @@ def erro():
     blt.printf(12, 9, '[color=#ff3f3f]              \ \___\  \_______\     \ \___\   [/color]')
     blt.printf(12, 10, '[color=#001eff]               \|___|\_|_______|      \|___|  [/color]')  
 
-    blt.printf(26, 13, '[color=#674ea7]PÁGINA NÃO ENCONTRADA[/color]')  
+    language.get_localized_text('error', section='egotext', color="674ea7") 
     blt.refresh()
 
     logic()

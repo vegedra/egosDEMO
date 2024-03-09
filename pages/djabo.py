@@ -1,5 +1,6 @@
 from bearlibterminal import terminal as blt
 from pygame import mixer
+import language
 
 def djabo():
     import config as cfg
@@ -13,7 +14,8 @@ def logic():
     import config as cfg
     while True:
         blt.color('#ae0000') 
-        blt.printf(6, 0, 'EGOTEXT   << 666 >>   SEGUNDA-FEIRA - 11 DE ABRIL, 1996  22:13h')
+        language.get_localized_text('welcome5', section='egotext', color="#ae0000") 
+        blt.printf(19, 0, '666')
         cfg.ascii_art('res/egotext/ele.txt', 0, 1)
         blt.refresh()
 

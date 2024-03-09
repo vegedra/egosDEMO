@@ -52,15 +52,15 @@ def logic():
                                                                          
                                                                          
 """)
-        language.get_localized_text('welcome8', section='egotext', color="white") 
-        language.get_localized_text('welcome9', section='egotext', color="white") 
+        language.get_localized_text('weather1', section='egotext', color="white") 
+        language.get_localized_text('weather2', section='egotext', color="white") 
         blt.refresh()
 
         if blt.has_input():
 
             cfg.egotext_input()
 
-            if key == blt.TK_LEFT:
+            if cfg.key == blt.TK_LEFT:
                 cfg.play_sound('sfx/sound_menu_close.ogg', volume=0.5, loop = 0)
                 blt.color('white')
                 blt.bkcolor('black')
@@ -70,7 +70,7 @@ def logic():
                 cfg.clear_input_queue()
                 saudacao()
 
-            elif key == blt.TK_RIGHT:
+            elif cfg.key == blt.TK_RIGHT:
                 cfg.play_sound('sfx/sound_menu_close.ogg', volume=0.5, loop = 0)    
                 blt.color('white')
                 blt.bkcolor('black')

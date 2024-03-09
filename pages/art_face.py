@@ -1,6 +1,7 @@
 from bearlibterminal import terminal as blt
 from pygame import mixer
 import config as cfg
+import language
 
 def art():
     #blt.open()
@@ -15,7 +16,9 @@ def logic():
         blt.printf(8, 2, " ")
 
         blt.color('pink') 
-        blt.printf(6, 0, 'EGOTEXT   << 104 >>   SEGUNDA-FEIRA - 11 DE ABRIL, 1996  22:13h')
+        language.get_localized_text('welcome5', section='egotext', color="pink") 
+        blt.color('pink') 
+        blt.printf(19, 0, '104')
         blt.printf(33, 33, 'prope est')
         blt.puts(1, 33, " " * 30)
         blt.refresh()

@@ -1,6 +1,7 @@
 from bearlibterminal import terminal as blt
 from pygame import mixer
 import config as cfg
+import language
 
 def porn():
     #blt.open()
@@ -17,14 +18,15 @@ def logic():
         blt.color('yellow')
         cfg.ascii_art('res/egotext/dama_tel.txt', 14, 27)
         blt.printf(14, 27, ' ')
+        language.get_localized_text('welcome5', section='egotext', color="pink") 
 
         blt.color('pink') 
-        blt.printf(6, 0, 'EGOTEXT   << 103 >>   SEGUNDA-FEIRA - 11 DE ABRIL, 1996  22:13h')
-        blt.printf(5, 6, 'MULHERES NUAS (E SEM ROUPAS!)')
-        blt.printf(5, 9, 'Saia do computador e')
-        blt.printf(5, 10, "venha 'curtir'!")
-        blt.printf(5, 12, 'AVISO: NÃO MORDA OU ARRANHE AS')
-        blt.printf(5, 13, 'GAROTAS!')
+        blt.printf(19, 0, '103')
+        language.get_localized_text('porn2', section='egotext', color="pink") 
+        language.get_localized_text('porn3', section='egotext', color="pink") 
+        language.get_localized_text('porn4', section='egotext', color="pink") 
+        language.get_localized_text('porn5', section='egotext', color="pink") 
+        language.get_localized_text('porn1', section='egotext', color="pink") 
         blt.puts(1, 33, " " * 70)
         blt.refresh()
 

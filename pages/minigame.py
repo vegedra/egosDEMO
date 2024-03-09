@@ -55,12 +55,18 @@ def puzzle():
         blt.put(player_x, player_y, ord('@'))
 
         # Mostra o tempo restante
-        blt.printf(0, map_height + 1, f"Tempo restante:{remaining_time}")
+        if cfg.game_state['current_language'] == 'en': 
+            blt.printf(0, map_height + 1, f"Time remaining:{remaining_time}")
+        else:
+            blt.printf(0, map_height + 1, f"Tempo restante:{remaining_time}")
         blt.refresh()
 
         # Verifica se os 15 segundos se passaram
         if time.time() - start_time > 15:
-            blt.printf(0, map_height + 3, "[color=white]O tempo acabou![/color]")
+            if cfg.game_state['current_language'] == 'en': 
+                blt.printf(0, map_height + 3, "[color=white]Time's Over![/color]")
+            else:
+                blt.printf(0, map_height + 3, "[color=white]O tempo acabou![/color]")
             blt.refresh()
             blt.delay(1000)
 
@@ -79,7 +85,10 @@ def puzzle():
             unlock.play()
             unlock.set_volume(0.3)
 
-            blt.printf(0, map_height + 3, "Você conseguiu!")
+            if cfg.game_state['current_language'] == 'en': 
+                blt.printf(0, map_height + 3, "You did it!")
+            else:
+                blt.printf(0, map_height + 3, "Você conseguiu!")
             blt.refresh()
             blt.delay(2000)
 

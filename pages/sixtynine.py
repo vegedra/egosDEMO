@@ -1,6 +1,7 @@
 from bearlibterminal import terminal as blt
 from pygame import mixer
 import config as cfg
+import language
 
 def meianove():
     blt.set('window.size=75x35')
@@ -10,7 +11,8 @@ def meianove():
 def logic():
     while True:
         blt.color('#FE524D') 
-        blt.printf(6, 0, 'EGOTEXT   << 69 >>   SEGUNDA-FEIRA - 11 DE ABRIL, 1996  22:13h')
+        language.get_localized_text('welcome5', section='egotext', color="#FE524D") 
+        blt.printf(20, 0, '69')
         cfg.ascii_art('res/egotext/meianove.txt', 18, 8)
         blt.puts(1, 33, " " * 70)
         blt.refresh()

@@ -1,6 +1,7 @@
 from bearlibterminal import terminal as blt
 from pygame import mixer
 import config as cfg
+import language
 
 def arctic():
     blt.set('window.size=75x35')
@@ -12,13 +13,14 @@ def arctic():
 def logic():
     while True:
         blt.color('#FFFAFA') 
-        blt.printf(6, 0, 'EGOTEXT   << 505 >>   SEGUNDA-FEIRA - 11 DE ABRIL, 1996  22:13h')
+        language.get_localized_text('welcome5', section='egotext', color="#FFFAFA") 
         blt.printf(10, 13, """
 I'm going back to 505
 If it's a seven-hour flight or a 45-minute drive
 In my imagination, you're waiting lying on your side
 With your hands between your thighs
                """)
+        blt.printf(19, 0, '505')
         blt.puts(1, 33, " " * 70)
         blt.refresh()
 

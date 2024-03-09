@@ -1,6 +1,7 @@
 from bearlibterminal import terminal as blt
 from pygame import mixer
 import config as cfg
+import language
 
 def jamesbond():
     blt.set('window.size=75x35')
@@ -10,7 +11,9 @@ def jamesbond():
 def logic():
     while True:
         blt.color('#fffff8') 
-        blt.printf(6, 0, '[color=#F73718]EGOTEXT   << 007 >>   SEGUNDA-FEIRA - 11 DE ABRIL, 1996  22:13h[/color]')
+        language.get_localized_text('welcome5', section='egotext', color="#fffff8") 
+        blt.printf(19, 0, '007')
+
         cfg.ascii_art('res/egotext/james.txt', 1, 2)
 
         blt.color('#F5BD02') 
@@ -18,7 +21,7 @@ def logic():
          .-.  .-.  --..::==
         (   )(   )  //"
          '-'  '-'  /    
-        GOLDENEYE - EM BREVE
+        GOLDENEYE - 007
 """)
         blt.puts(1, 33, " " * 70)
         blt.refresh()
