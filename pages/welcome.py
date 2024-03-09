@@ -60,12 +60,12 @@ def logic():
         blt.puts(1, 33, " " * 10)
         blt.refresh()
 
-
         blt.printf(3, 15, '[color=#5d6f87]Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y[/color]')
         language.get_localized_text('welcome5', section='egotext', color="#695bd4") 
         if time.time() % frequency < frequency / 2:
           language.get_localized_text('welcome7', section='egotext', color="#5d6f87") 
           language.get_localized_text('welcome6', section='egotext', color="#695bd4") 
+        blt.printf(19, 0, '100')
         blt.refresh()
 
         # Verifica se o usuario apertou alguma tecla e a lê

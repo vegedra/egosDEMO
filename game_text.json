@@ -89,9 +89,11 @@
 		"welcome2": {"text": "Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉ PRESS ESC TO RETURN TO DESKTOP ▉Y▉Y▉Y▉Y▉Y▉Y▉Y", "x": 3, "y": 30},
 		"welcome3": {"text": "<--- USE THE KEYBOARD ARROW KEYS TO NAVIGATE --->", "x": 15, "y": 33},
 		"welcome4": {"text": "PRESS 'S' TO SEARCH FOR SPECIFIC PAGES", "x": 12, "y": 34},
-		"welcome5": {"text": "EGOTEXT   << 100 >>   Mon 11 April, 1996   10:13pm", "x": 6, "y": 0}, 
-		"welcome6": {"text": "EGOTEXT   << 100 >>   Mon 11 April, 1996   10:14pm", "x": 6, "y": 0},
-		"welcome7": {"text": "Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉ LEAVING YOU UPDATED BYTE BY BYTE ▉Y▉Y▉Y▉Y▉Y▉Y▉Y", "x": 3, "y": 15}
+		"welcome5": {"text": "EGOTEXT   <<     >>         Mon 11 April, 1996         10:13pm", "x": 6, "y": 0}, 
+		"welcome6": {"text": "EGOTEXT   <<     >>         Mon 11 April, 1996         10:14pm", "x": 6, "y": 0},
+		"welcome7": {"text": "Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉ LEAVING YOU UPDATED BYTE BY BYTE ▉Y▉Y▉Y▉Y▉Y▉Y▉Y", "x": 3, "y": 15},
+		"welcome8": {"text": " TODAY'S WEATHER: 80° F                CLOUDY                   ↓ 8 km/h", "x": 1, "y": 29},
+		"welcome9": {"text": " RAIN: 4%                                                  HUMIDITY: 49% ", "x": 1, "y": 30}
 	  }
     },
     "pt_BR": {
@@ -184,14 +186,11 @@
 		"welcome2": {"text": "Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉ PRESSIONE ESC PARA VOLTAR AO DESKTOP! ▉Y▉Y▉Y▉Y▉Y▉Y▉Y", "x": 3, "y": 30},
 		"welcome3": {"text": "<--- USE AS SETAS DO TECLADO PARA NAVEGAR --->", "x": 15, "y": 33},
 		"welcome4": {"text": "APERTE 'S' PARA PESQUISAR POR UMA PÁGINA ESPECÍFICA", "x": 12, "y": 34},
-		"welcome5": {"text": "EGOTEXT   << 100 >>   SEGUNDA-FEIRA - 11 DE ABRIL, 1996  22:13h", "x": 6, "y": 0},
-		"welcome6": {"text": "EGOTEXT   << 100 >>   SEGUNDA-FEIRA - 11 DE ABRIL, 1996  22:14h", "x": 6, "y": 0},
+		"welcome5": {"text": "EGOTEXT   <<     >>   SEGUNDA-FEIRA - 11 DE ABRIL, 1996  22:13h", "x": 6, "y": 0},
+		"welcome6": {"text": "EGOTEXT   <<     >>   SEGUNDA-FEIRA - 11 DE ABRIL, 1996  22:14h", "x": 6, "y": 0},
 		"welcome7": {"text": "Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉ TE DEIXANDO ATUALIZADO(A) BYTE A BYTE ▉Y▉Y▉Y▉Y▉Y▉Y▉Y", "x": 3, "y": 15},
-		"terminal8": {"text": "Abrindo arquivo 'password.txt'", "x": 2, "y": 32},
-		"terminal9": {"text": "Comando desconhecido ou escrito de forma errada...", "x": 2, "y": 32},
-		"terminal10": {"text": "Sobrescrevendo arquivo 'password.txt' dentro de 'pesquisa.txt'", "x": 2, "y": 32},
-		"terminal11": {"text": "Fechando.", "x": 2, "y": 32},
-		"terminal12": {"text": "Comando desconhecido, em caso de dúvidas, acesse o MANUAL.", "x": 2, "y": 32}
+		"welcome8": {"text": " CLIMA DE HOJE: 27° C                NUBLADO                    ↓ 8 km/h", "x": 1, "y": 29},
+		"welcome9": {"text": " Chuva: 4%                                                  Umidade: 49% ", "x": 1, "y": 30}
 	  }
     }
   }

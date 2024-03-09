@@ -38,7 +38,7 @@ def puzzle():
 
     # Game loop
     while True:
-        # Record the start time of the frame
+        # Grava o tempo de início do frame
         frame_start_time = time.time()
 
         # Calcula o tempo restante
@@ -113,7 +113,7 @@ def puzzle():
         # Calculate the time spent in the frame
         frame_time_elapsed = time.time() - frame_start_time
 
-        # Cap the frame rate by delaying the remaining time
+        # Cap the frame rate by delaying the remaining time using delta time
         time.sleep(max(0, frame_time - frame_time_elapsed))
 
 # TODO NOS FUTUROS PUZZLES: MAIS CORES E MAPAS MAIS COMPLEXOS

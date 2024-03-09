@@ -112,6 +112,8 @@ def egotext_input():
         match_pages()
 
     elif key == blt.TK_ESCAPE:   
+        blt.color('white')
+        blt.bkcolor('black')
         play_sound('sfx/sound_menu_close.ogg', volume=0.5, loop = 0)   
         mixer.music.fadeout(1000)
         from desktop.desktop import terminal
