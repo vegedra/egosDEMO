@@ -104,14 +104,17 @@
 		"porn5": {"text": "WARNING: DO NOT BITE OR SCRATCH", "x": 5, "y": 12},
 		"error": {"text": "PAGE NOT FOUND", "x": 30, "y": 13},
 		"hitchhiker": {"text": "Yes, that's the answer.", "x": 10, "y": 13},
-		"finaldemo1": {"text": "OPS... O JOGO AINDA NÃO ESTÁ PRONTO!", "x": 19, "y": 16},
-		"finaldemo2": {"text": "MAS OBRIGADO POR JOGAR ATÉ AQUI!", "x": 19, "y": 17},
-		"finaldemo3": {"text": "Jogo feito por Pedro Ivo Rocha", "x": 19, "y": 19},
-		"finaldemo4": {"text": "Músicas feitas por Vital Waves & HORUS", "x": 19, "y": 20},
-		"finaldemo5": {"text": "AGRADECIMENTOS ESPECIAIS:", "x": 19, "y": 22},
-		"finaldemo6": {"text": "Gabrielle Carmo pelo apoio", "x": 19, "y": 23},
-		"finaldemo7": {"text": "Alexander 'cfyzium' Malinin pela lib", "x": 19, "y": 24},
-		"finaldemo8": {"text": "Um oferecimento G-FLEX Etiquetas e Rótulos Adesivos.", "x": 12, "y": 26}
+		"finaldemo1": {"text": "ouch... The game is not finished yet!", "x": 19, "y": 16},
+		"finaldemo2": {"text": "but thank you for playing it!", "x": 19, "y": 17},
+		"finaldemo3": {"text": "Game by Pedro Ivo Rocha", "x": 19, "y": 19},
+		"finaldemo4": {"text": "Musics by Vital Waves & HORUS", "x": 19, "y": 20},
+		"finaldemo5": {"text": "SPECIAL THANKS:", "x": 19, "y": 22},
+		"finaldemo6": {"text": "Gabrielle Carmo", "x": 19, "y": 23},
+		"finaldemo7": {"text": "Alexander 'cfyzium' Malinin for the lib", "x": 19, "y": 24},
+		"finaldemo8": {"text": "Um oferecimento G-FLEX Etiquetas e Rótulos Adesivos.", "x": 12, "y": 26},
+		"unlock_b1": {"text": "Press Enter to insert the password.", "x": 15, "y": 6}, 
+		"unlock_b2": {"text": "CORRECT PASSWORD", "x": 15, "y": 13},
+		"unlock_b3": {"text": "INCORRECT PASSWORD", "x": 15, "y": 13}
 	  }
     },
     "pt_BR": {
@@ -206,6 +209,7 @@
 		"welcome4": {"text": "APERTE 'S' PARA PESQUISAR POR UMA PÁGINA ESPECÍFICA", "x": 12, "y": 34},
 		"welcome5": {"text": "EGOTEXT   <<     >>   SEGUNDA-FEIRA - 11 DE ABRIL, 1996  22:13h", "x": 6, "y": 0},
 		"welcome6": {"text": "EGOTEXT   <<     >>   SEGUNDA-FEIRA - 11 DE ABRIL, 1996  22:14h", "x": 6, "y": 0},
+		"welcome6_1": {"text": "EGOTEXT   <<    >>    SEGUNDA-FEIRA - 11 DE ABRIL, 1996  22:14h", "x": 6, "y": 0},
 		"welcome7": {"text": "Y▉Y▉Y▉Y▉Y▉Y▉Y▉Y▉ TE DEIXANDO ATUALIZADO(A) BYTE A BYTE ▉Y▉Y▉Y▉Y▉Y▉Y▉Y", "x": 3, "y": 15},
 		"weather1": {"text": " CLIMA DE HOJE: 27° C                NUBLADO                    ↓ 8 km/h", "x": 1, "y": 29},
 		"weather2": {"text": " Chuva: 4%                                                  Umidade: 49% ", "x": 1, "y": 30},
@@ -226,7 +230,16 @@
 		"finaldemo5": {"text": "AGRADECIMENTOS ESPECIAIS:", "x": 19, "y": 22},
 		"finaldemo6": {"text": "Gabrielle Carmo pelo apoio", "x": 19, "y": 23},
 		"finaldemo7": {"text": "Alexander 'cfyzium' Malinin pela lib", "x": 19, "y": 24},
-		"finaldemo8": {"text": "Um oferecimento G-FLEX Etiquetas e Rótulos Adesivos.", "x": 12, "y": 26}
+		"finaldemo8": {"text": "Um oferecimento G-FLEX Etiquetas e Rótulos Adesivos.", "x": 12, "y": 26},
+		"unlock_b1": {"text": "Pressione Enter para inserir a chave de acesso.", "x": 15, "y": 6},
+		"unlock_b2": {"text": "SENHA CORRETA.", "x": 15, "y": 13},
+		"unlock_b3": {"text": "SENHA INCORRETA.", "x": 15, "y": 13},
+		"esfinge_a1": {"text": "Eu sou a esfinge, me diga qual o clima de hoje.", "x": 14, "y": 4},
+		"esfinge_a2": {"text": "Pressione Enter para digitar:", "x": 22, "y": 26},
+		"esfinge_a3": {"text": "Muito bem. Agora atravesse meu labirinto antes que o tempo acabe!", "x": 5, "y": 26},
+		"esfinge_a4": {"text": "Use as setas do teclado para tocar no $.", "x": 18, "y": 27},
+		"esfinge_a5": {"text": "Pressione Enter para iniciar o desafio.", "x": 18, "y": 28},
+		"esfinge_a6": {"text": "ERRADO! ERRADO!", "x": 28, "y": 26}
 	  }
     }
   }

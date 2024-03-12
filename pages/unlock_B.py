@@ -2,6 +2,7 @@ from bearlibterminal import terminal as blt
 from pygame import mixer
 import time
 import config as cfg
+import language
 
 def erroo():
     global text, frequency
@@ -29,10 +30,9 @@ def logic():
         if time.time() % frequency < frequency / 2:
             blt.print(32, 3, text)
 
-        blt.printf(6, 0, 'EGOTEXT   << 99 >>   SEGUNDA-FEIRA - 11 DE ABRIL, 1996  22:13h')
-        blt.print(15, 6, "Pressione Enter para inserir a chave de acesso.")
-        blt.printf(6, 0, '[color=yellow]EGOTEXT   << 99 >>   SEGUNDA-FEIRA - 11 DE ABRIL, 1996  22:13h[/color]')
-        blt.print(15, 6, "[color=yellow]Pressione Enter para inserir a chave de acesso.[/color]")
+        language.get_localized_text('welcome6_1', section='egotext', color="yellow") 
+        blt.printf(19, 0, '99')
+        language.get_localized_text('unlock_b1', section='egotext', color="yellow") 
         blt.refresh()
 
         # Verifica se o usuario apertou alguma tecla e a lê
@@ -48,7 +48,7 @@ def logic():
                 # Se acertou:
                 #if (senha == "fenix" or senha == "FENIX"):
                 if senha.lower() == "fenix" or senha.lower() == "phoenix":
-                    blt.print(15, 13, "SENHA CORRETA.")
+                    language.get_localized_text('unlock_b2', section='egotext', color="yellow") 
                     blt.refresh()
                     blt.delay(1000)
                     from pages.finaldemo import fim
@@ -58,7 +58,7 @@ def logic():
 
                 # Se errou:
                 else:
-                    blt.print(15, 13, "SENHA INCORRETA.")
+                    language.get_localized_text('unlock_b3', section='egotext', color="yellow") 
                     blt.refresh()
                     blt.delay(1000)
                     blt.clear()

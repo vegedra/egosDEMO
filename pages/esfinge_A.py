@@ -1,13 +1,13 @@
 from bearlibterminal import terminal as blt
 from pygame import mixer
 import config as cfg
+import language
 
 def esfinge_A():
     #blt.open()
     blt.set("window: size=75x35, cellsize=0x0")
 
     if cfg.game_state['enigma_esfingeA'] == 0:
-
         logic() 
 
     else:
@@ -18,13 +18,14 @@ def esfinge_A():
 def logic():
     while True:
         blt.color('#ffdc73') 
-        blt.printf(6, 0, 'EGOTEXT   << 105 >>   SEGUNDA-FEIRA - 11 DE ABRIL, 1996  22:13h')
-        blt.printf(14, 4, 'Eu sou a esfinge, me diga qual o clima de hoje.')
+        language.get_localized_text('welcome5', section='egotext', color="#ffdc73") 
+        blt.printf(20, 0, '105')
+        language.get_localized_text('esfinge_a1', section='egotext', color="#ffdc73") 
         import config as cfg
         cfg.ascii_art('res/egotext/esfinge.txt', 12, 6)
         blt.printf(12, 6, ' ')
 
-        blt.printf(22, 26, 'Pressione Enter para digitar')
+        language.get_localized_text('esfinge_a2', section='egotext', color="#ffdc73") 
         blt.puts(1, 33, " " * 70)
         blt.refresh()
 
@@ -42,9 +43,9 @@ def logic():
                     blt.clear()
                     cfg.ascii_art('res/egotext/esfinge.txt', 12, 6)
 
-                    blt.printf(5, 26, 'Muito bem. Agora atravesse meu labirinto antes que o tempo acabe!')
-                    blt.printf(18, 27, 'Use as setas do teclado para tocar no $.')
-                    blt.printf(18, 28, 'Pressione Enter para iniciar o desafio.')
+                    language.get_localized_text('esfinge_a3', section='egotext', color="#ffdc73") 
+                    language.get_localized_text('esfinge_a4', section='egotext', color="#ffdc73") 
+                    language.get_localized_text('esfinge_a5', section='egotext', color="#ffdc73") 
                     blt.refresh()
 
                     # Ignora qualquer input q n seja ENTER
@@ -61,7 +62,7 @@ def logic():
                 # Resposta errada para o enigma
                 else:
                     blt.puts(22, 26, " " * 50)
-                    blt.printf(28, 26, 'ERRADO! ERRADO!')
+                    language.get_localized_text('esfinge_a6', section='egotext', color="#ffdc73") 
                     blt.refresh()
                     blt.delay(1500)
                     blt.clear()

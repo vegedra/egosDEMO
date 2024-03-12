@@ -11,8 +11,8 @@ def meianove():
 def logic():
     while True:
         blt.color('#FE524D') 
-        language.get_localized_text('welcome5', section='egotext', color="#FE524D") 
-        blt.printf(20, 0, '69')
+        language.get_localized_text('welcome6_1', section='egotext', color="#FE524D") 
+        blt.printf(19, 0, '69')
         cfg.ascii_art('res/egotext/meianove.txt', 18, 8)
         blt.puts(1, 33, " " * 70)
         blt.refresh()
