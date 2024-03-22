@@ -55,6 +55,7 @@ def puzzle():
         blt.put(player_x, player_y, ord('@'))
 
         # Mostra o tempo restante
+        import config as cfg
         if cfg.game_state['current_language'] == 'en': 
             blt.printf(0, map_height + 1, f"Time remaining:{remaining_time}")
         else:

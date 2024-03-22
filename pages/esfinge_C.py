@@ -12,13 +12,15 @@ def logic():
     while True:
         import config as cfg
         blt.color('#ffdc73')
-        blt.printf(6, 0, 'EGOTEXT   << 106 >>   SEGUNDA-FEIRA - 11 DE ABRIL, 1996  22:13h')
+        language.get_localized_text('welcome5', section='egotext', color="#ffdc73") 
+        blt.printf(20, 0, '106')
 
         cfg.ascii_art('res/egotext/esfinge_rosto.txt', 12, 6)
+        cfg.ascii_art('res/egotext/esfinge_rosto.txt', 12, 6)
     
-        blt.printf(22, 26, 'Parabéns por completar a demo.')
-        blt.printf(22, 27, 'Eu tenho um presente para você!')
-        blt.printf(31, 28, 'Vá para 777.')
+        language.get_localized_text('esfinge_c1', section='egotext', color="#ffdc73") 
+        language.get_localized_text('esfinge_c2', section='egotext', color="#ffdc73") 
+        language.get_localized_text('esfinge_c3', section='egotext', color="#ffdc73") 
         blt.refresh()
 
         if blt.has_input():

@@ -114,7 +114,17 @@
 		"finaldemo8": {"text": "Um oferecimento G-FLEX Etiquetas e Rótulos Adesivos.", "x": 12, "y": 26},
 		"unlock_b1": {"text": "Press Enter to insert the password.", "x": 15, "y": 6}, 
 		"unlock_b2": {"text": "CORRECT PASSWORD", "x": 15, "y": 13},
-		"unlock_b3": {"text": "INCORRECT PASSWORD", "x": 15, "y": 13}
+		"unlock_b3": {"text": "INCORRECT PASSWORD", "x": 15, "y": 13},
+		"esfinge_a1": {"text": "I'm the Sphinx. Tell me the weather.", "x": 17, "y": 4},
+		"esfinge_a2": {"text": "Press Enter to Answer", "x": 26, "y": 26},
+		"esfinge_a3": {"text": "Very good. Now get through my maze before time runs out!", "x": 7, "y": 26},
+		"esfinge_a4": {"text": "Use the arrow keys to touch the $.", "x": 19, "y": 27},
+		"esfinge_a5": {"text": "Press Enter to Start.", "x": 24, "y": 28},
+		"esfinge_a6": {"text": "WRONG! WRONG!", "x": 28, "y": 26},
+		"esfinge_b1": {"text": "Very good. Now you have a friend, treat him nice.", "x": 12, "y": 26},
+		"esfinge_c1": {"text": "Congratulations on completing the demo.", "x": 22, "y": 26},
+		"esfinge_c2": {"text": "I have a gift for you!", "x": 22, "y": 27},
+		"esfinge_c3": {"text": "Go to page 777. ", "x": 12, "y": 28}
 	  }
     },
     "pt_BR": {
@@ -239,7 +249,11 @@
 		"esfinge_a3": {"text": "Muito bem. Agora atravesse meu labirinto antes que o tempo acabe!", "x": 5, "y": 26},
 		"esfinge_a4": {"text": "Use as setas do teclado para tocar no $.", "x": 18, "y": 27},
 		"esfinge_a5": {"text": "Pressione Enter para iniciar o desafio.", "x": 18, "y": 28},
-		"esfinge_a6": {"text": "ERRADO! ERRADO!", "x": 28, "y": 26}
+		"esfinge_a6": {"text": "ERRADO! ERRADO!", "x": 28, "y": 26},
+		"esfinge_b1": {"text": "Muito bem. Agora tens um companheiro, trate-o bem.", "x": 12, "y": 26},
+		"esfinge_c1": {"text": "Parabéns por completar a demo.", "x": 22, "y": 26},
+		"esfinge_c2": {"text": "Eu tenho um presente para você!", "x": 22, "y": 27},
+		"esfinge_c3": {"text": "Vá para 777. ", "x": 12, "y": 28}
 	  }
     }
   }

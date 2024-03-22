@@ -37,7 +37,7 @@ def logic():
                 rc, clima = blt.read_str(23, 27, "", 20)
 
                 # Resposta certa para o enigma
-                if clima == "27":
+                if clima == "27" or clima == "80":
                     blt.puts(24, 26, " " * 50)
                     blt.refresh()
                     blt.clear()
