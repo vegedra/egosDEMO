@@ -9,7 +9,7 @@ def fim():
     # OST
     cfg.play_music('bgm/credits.ogg', volume=0.7, loop=-1, crossfade_duration=100)
 
-    cfg.game_state['finaldemo']  = 1
+    cfg.game_state['finaldemo'] = 1
 
     logic()
     
@@ -27,17 +27,14 @@ def logic():
         blt.printf(11, 9, '[color=#ff3f3f]              \ \___\  \_______\     \ \___\   [/color]')
         blt.printf(11, 10, '[color=#001eff]               \|___|\_|_______|      \|___|  [/color]')  
 
-        blt.color('#674ea7')
-        blt.printf(19, 16, 'OPS... O JOGO AINDA NÃO ESTÁ PRONTO!')  
-        blt.printf(19, 17, 'MAS OBRIGADO POR JOGAR ATÉ AQUI!')  
-    
-        blt.printf(19, 19, 'Jogo feito por Pedro Ivo Rocha') 
-        blt.printf(19, 20, 'Músicas feitas por Vital Waves & HORUS') 
-
-        blt.printf(19, 22, 'AGRADECIMENTOS ESPECIAIS:') 
-        blt.printf(19, 23,'Gabrielle Carmo pelo apoio')
-        blt.printf(19, 24,'Alexander "cfyzium" Malinin pela lib')
-        blt.printf(12, 26,'Um oferecimento G-FLEX Etiquetas e Rótulos Adesivos.')
+        language.get_localized_text('finaldemo1', section='egotext', color="#674ea7") 
+        language.get_localized_text('finaldemo2', section='egotext', color="#674ea7") 
+        language.get_localized_text('finaldemo3', section='egotext', color="#674ea7") 
+        language.get_localized_text('finaldemo4', section='egotext', color="#674ea7") 
+        language.get_localized_text('finaldemo5', section='egotext', color="#674ea7") 
+        language.get_localized_text('finaldemo6', section='egotext', color="#674ea7") 
+        language.get_localized_text('finaldemo7', section='egotext', color="#674ea7") 
+        language.get_localized_text('finaldemo8', section='egotext', color="#674ea7") 
         blt.refresh()
 
         if blt.has_input():

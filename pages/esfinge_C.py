@@ -1,5 +1,6 @@
 from bearlibterminal import terminal as blt
 from pygame import mixer
+import language
 
 def esfinge_C():
     #blt.open()

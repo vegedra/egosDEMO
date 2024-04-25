@@ -1,5 +1,7 @@
 from bearlibterminal import terminal as blt
 from pygame import mixer
+import language
+import config as cfg
 
 def esfinge_B():
     #blt.open()
@@ -11,7 +13,6 @@ def esfinge_B():
 
 def logic():
     while True:
-        import config as cfg
         blt.color('#ffdc73') 
         language.get_localized_text('welcome5', section='egotext', color="#ffdc73") 
         blt.printf(20, 0, '105')
@@ -41,7 +42,6 @@ def logic():
                 art()
                 
             elif cfg.key == blt.TK_RIGHT:
-                import config as cfg
                 if cfg.game_state['finaldemo'] == 1:
                     cfg.play_sound('sfx/sound_menu_close.ogg', volume=0.5, loop = 0)  
                     blt.color('white')

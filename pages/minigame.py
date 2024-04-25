@@ -95,8 +95,10 @@ def puzzle():
 
             blt.set("window: size=50x30, cellsize=0x0")
             blt.refresh()
+            
             from pages.esfinge_B import esfinge_B
             blt.clear()
+            cfg.clear_input_queue()
             esfinge_B()
 
         # Controles que mudam a posição do jogador (@)

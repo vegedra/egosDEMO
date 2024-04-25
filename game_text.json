@@ -123,9 +123,9 @@
 		"esfinge_a5": {"text": "Press Enter to Start.", "x": 24, "y": 28},
 		"esfinge_a6": {"text": "WRONG! WRONG!", "x": 28, "y": 26},
 		"esfinge_b1": {"text": "Very good. Now you have a friend, treat him nice.", "x": 12, "y": 26},
-		"esfinge_c1": {"text": "Congratulations on completing the demo.", "x": 22, "y": 26},
-		"esfinge_c2": {"text": "I have a gift for you!", "x": 22, "y": 27},
-		"esfinge_c3": {"text": "Go to page 777. ", "x": 12, "y": 28}
+		"esfinge_c1": {"text": "Congratulations on completing the demo.", "x": 20, "y": 26},
+		"esfinge_c2": {"text": "I have a gift for you!", "x": 20, "y": 27},
+		"esfinge_c3": {"text": "Go to page 777. ", "x": 20, "y": 28}
 	  }
     },
     "pt_BR": {
