@@ -91,6 +91,7 @@
 		"welcome4": {"text": "PRESS 'S' TO SEARCH FOR SPECIFIC PAGES", "x": 18, "y": 34},
 		"welcome5": {"text": "EGOTEXT   <<     >>         Mon 11 April, 1996         10:13pm", "x": 6, "y": 0}, 
 		"welcome6": {"text": "EGOTEXT   <<     >>         Mon 11 April, 1996         10:14pm", "x": 6, "y": 0},
+		"welcome6_1": {"text": "EGOTEXT   <<    >>         Mon 11 April, 1996         10:14pm", "x": 6, "y": 0},
 		"welcome7": {"text": " LEAVING YOU UPDATED BYTE BY BYTE ", "x": 21, "y": 15},
 		"weather1": {"text": " TODAY'S WEATHER: 80° F                CLOUDY                   ↓ 8 km/h", "x": 1, "y": 29},
 		"weather2": {"text": " RAIN: 4%                                                  HUMIDITY: 49% ", "x": 1, "y": 30},
