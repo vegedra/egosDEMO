@@ -126,6 +126,18 @@
 		"esfinge_c1": {"text": "Congratulations on completing the demo.", "x": 20, "y": 26},
 		"esfinge_c2": {"text": "I have a gift for you!", "x": 20, "y": 27},
 		"esfinge_c3": {"text": "Go to page 777. ", "x": 20, "y": 28}
+	  },
+	  "hoobler1": {
+        "hoobler1": {"text": "1) Who are you?", "x": 14, "y": 7},
+		"hoobler2": {"text": "2) Questions", "x": 14, "y": 8},
+		"hoobler3": {"text": "> Hello, I'm Hoobler, how can I help you?", "x": 1, "y": 3},
+		"hoobler4": {"text": "Opening...", "x": 2, "y": 32},
+		"hoobler5": {"text": "Write something!", "x": 1, "y": 5},
+		"hoobler6": {"text": "> I'm an A.I. Assistant and my", "x": 1, "y": 7},
+		"hoobler7": {"text": "duty is to help this machine's owner.", "x": 1, "y": 8},
+		"hoobler8": {"text": "Hi... who are you?", "x": 1, "y": 5},
+		"hoobler9": {"text": "1) Help?", "x": 14, "y": 11},
+		"hoobler10": {"text": "Write something!", "x": 1, "y": 10}
 	  }
     },
     "pt_BR": {
@@ -255,6 +267,18 @@
 		"esfinge_c1": {"text": "Parabéns por completar a demo.", "x": 22, "y": 26},
 		"esfinge_c2": {"text": "Eu tenho um presente para você!", "x": 22, "y": 27},
 		"esfinge_c3": {"text": "Vá para 777. ", "x": 12, "y": 28}
+	  },
+	  "hoobler1": {
+        "hoobler1": {"text": "1) Quem é você?", "x": 14, "y": 7},
+		"hoobler2": {"text": "2) Perguntas", "x": 14, "y": 8},
+		"hoobler3": {"text": "> Olá, eu sou Hoobler, como posso te ajudar?", "x": 1, "y": 3},
+		"hoobler4": {"text": "Abrindo...", "x": 2, "y": 32},
+		"hoobler5": {"text": "Comece a digitar!", "x": 1, "y": 5},
+		"hoobler6": {"text": "> Sou uma inteligência artificial e sirvo", "x": 1, "y": 7},
+		"hoobler7": {"text": "para auxiliar o dono desta máquina.", "x": 1, "y": 8},
+		"hoobler8": {"text": "Olá... quem é você?", "x": 1, "y": 5},
+		"hoobler9": {"text": "1) Auxiliar?", "x": 14, "y": 11},
+		"hoobler10": {"text": "Comece a digitar!", "x": 1, "y": 10}
 	  }
     }
   }

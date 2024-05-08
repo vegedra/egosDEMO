@@ -54,7 +54,9 @@ def player_type(message, x, y):
         key = blt.read()
 
         # Caso o jogador aperte o botão de fechar a janela do jogo
-        if key == blt.TK_CLOSE:
+        if key in (blt.TK_CLOSE, blt.TK_ESCAPE):
+            cfg.play_sound('sfx/sound_menu_close.ogg', volume=0.5, loop = 0)
+            mixer.music.fadeout(200)
             from desktop.desktop import terminal
             cfg.clear_input_queue()
             terminal()

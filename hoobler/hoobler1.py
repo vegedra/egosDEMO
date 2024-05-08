@@ -2,6 +2,7 @@ from bearlibterminal import terminal as blt
 from pygame import mixer
 from hoobler.hoobler_core import *
 import config as cfg
+import language
 
 # Facilitar minha vida
 def sair():
@@ -21,6 +22,12 @@ def sair():
         mixer.music.fadeout(200)
         from exit_confirmation import main
         main()  
+        
+    elif key == blt.TK_F4:
+            cfg.play_sound('sfx/sound_menu_close.ogg', volume=0.5, loop = 0)
+            from config import toggle_fullscreen
+            cfg.clear_input_queue()
+            toggle_fullscreen()
 
 # Final do dialogo 3-1
 def dialogofinal():
@@ -702,50 +709,50 @@ def escolha1():
     blt.clear()
     blt.printf(18, 0, normal) # Mostra o rosto de Hoobler armazenado na emoção dele no momento
     blt.printf(18, 0, " ")
-    blt.print(1, 3,"> Olá, eu sou Hoobler, como posso te ajudar?")
+    language.get_localized_text('hoobler3', section='hoobler1', color="#7b7bf4")
 
-    blt.print( 1, 7, "> Sou uma inteligência artificial e sirvo")
-    blt.print(1, 8, "para auxiliar o dono desta máquina.")
-    blt.print(1, 5, "[color=#FFB000]Olá... quem é você?[/color]")
+    language.get_localized_text('hoobler6', section='hoobler1', color="#7b7bf4")
+    language.get_localized_text('hoobler7', section='hoobler1', color="#7b7bf4")
+    
+    language.get_localized_text('hoobler8', section='hoobler1', color="#FFB000")
 
+    blt.color('#7b7bf4')
     blt.printf(11, 10, '' + r)
     blt.printf(11, 10, " ")
 
-    blt.printf(14, 11, '1) Auxiliar?')
+    language.get_localized_text('hoobler9', section='hoobler1', color="#7b7bf4")
     blt.refresh()
 
     sair()
 
     if key == blt.TK_1:
-        blt.clear()
-        blt.printf(18, 0, normal) 
-        blt.printf(18, 0, " ")
-        blt.print(1,3,"> Olá, eu sou Hoobler, como posso te ajudar?")
-        blt.refresh()
+        # x, y e largura e altura do retangulo apagador
+        blt.clear_area(1, 10, 50, 6)
 
-        blt.print( 1, 7, "> Sou uma inteligência artificial e sirvo")
-        blt.print(1, 8, "para auxiliar o dono desta máquina.")
-        blt.print(1, 5, "[color=#FFB000]Olá... quem é você?[/color]")
+        language.get_localized_text('hoobler10', section='hoobler1', color="#303047")
         blt.refresh()
-
-        blt.print(1, 10, '[color=#303047]Comece a digitar![/color]')
-        blt.refresh()
-        player_type("Que tipo de auxílio?", 1, 10)
+        
+        if cfg.game_state['current_language'] == 'en': 
+            player_type("What kind of 'help'?", 1, 10)
+        else:
+            player_type("Que tipo de auxílio?", 1, 10)
 
         blt.color('#7b7bf4')
         blt.delay(1000)
-        blt.printf(19, 0, happy)
-        hoobler_type("> Qualquer tipo. Se achar melhor, faça", 1, 12, 70)
-        hoobler_type("alguma pergunta!", 1, 13, 70)
+        
+        if cfg.game_state['current_language'] == 'en': 
+            hoobler_type("> Any type, I guess?", 1, 12, 90)
+            blt.delay(500)
+            blt.printf(19, 0, happy)
+            hoobler_type("Ask me something!", 1, 13, 70)
+        else:
+            blt.printf(19, 0, happy)
+            hoobler_type("> Qualquer tipo? Se achar melhor, faça", 1, 12, 75)
+            hoobler_type("alguma pergunta!", 1, 13, 75)
+            
         blt.refresh()
-        blt.delay(1000)
+        blt.delay(1500)
         dialogo2()
-
-    elif key == blt.TK_F4:
-        cfg.play_sound('sfx/sound_menu_close.ogg', volume=0.5, loop = 0)
-        from config import toggle_fullscreen
-        toggle_fullscreen()
-        escolha1() 
 
     else:
         escolha1()
@@ -764,11 +771,16 @@ def hoobler():
         blt.color('#7b7bf4')
         blt.printf(18, 0, normal) # Mostra o rosto de Hoobler armazenado na emoção dele no momento
         blt.printf(18, 0, " ")
-        hoobler_type("> Olá, eu sou Hoobler, como posso te ajudar?", 1, 3, 70)
+        
+        if cfg.game_state['current_language'] == 'en': 
+            hoobler_type("> Hello, I'm Hoobler, how can I help you?", 1, 3, 70)
+        else:
+            hoobler_type("> Olá, eu sou Hoobler, como posso te ajudar?", 1, 3, 70)
+        
         blt.printf(11, 6, '' + r)
         blt.printf(11, 6, " ")
-        blt.printf(14, 7, '1) Quem é você?')
-        blt.printf(14, 8, '2) Perguntas')
+        language.get_localized_text('hoobler1', section='hoobler1', color="#7b7bf4")
+        language.get_localized_text('hoobler2', section='hoobler1', color="#7b7bf4")
         blt.refresh()
 
         sair()
@@ -777,18 +789,27 @@ def hoobler():
             blt.clear()
             blt.printf(18, 0, normal) 
             blt.printf(18, 0, " ")
-            blt.print(1,3,"> Olá, eu sou Hoobler, como posso te ajudar?")
-            blt.refresh()
-            blt.print(1,5, '[color=#303047]Comece a digitar![/color]')
+            
+            language.get_localized_text('hoobler3', section='hoobler1', color="#7b7bf4")
+            
+            language.get_localized_text('hoobler5', section='hoobler1', color="#303047")
             blt.refresh()
 
-            player_type("Olá... quem é você?", 1, 5)
+            if cfg.game_state['current_language'] == 'en': 
+                player_type("Hi... who are you?", 1, 5)
+            else:
+                player_type("Olá... quem é você?", 1, 5)
 
             blt.delay(1000)
             blt.color('#7b7bf4')
 
-            hoobler_type("> Sou uma inteligência artificial e sirvo", 1, 7, 70)
-            hoobler_type("para auxiliar o dono desta máquina.", 1, 8, 70)
+            if cfg.game_state['current_language'] == 'en': 
+                hoobler_type("> I'm an A.I. Assistant and my", 1, 7, 65)
+                hoobler_type("duty is to help this machine's owner.", 1, 8, 65)
+            else:
+                hoobler_type("> Sou uma inteligência artificial e sirvo", 1, 7, 65)
+                hoobler_type("para auxiliar o dono desta máquina.", 1, 8, 65)
+                
             blt.refresh()
             blt.delay(1000)
             escolha1()
@@ -802,13 +823,6 @@ def hoobler():
             else:
                 blt.clear()
                 hoobler()
-
-        elif key == blt.TK_F4:
-            cfg.play_sound('sfx/sound_menu_close.ogg', volume=0.5, loop = 0)
-            from config import toggle_fullscreen
-            toggle_fullscreen()
-            hoobler()
-
         else:
             hoobler()
 
