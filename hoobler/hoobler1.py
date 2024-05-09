@@ -24,20 +24,27 @@ def sair():
         main()  
         
     elif key == blt.TK_F4:
-            cfg.play_sound('sfx/sound_menu_close.ogg', volume=0.5, loop = 0)
-            from config import toggle_fullscreen
-            cfg.clear_input_queue()
-            toggle_fullscreen()
+        cfg.play_sound('sfx/sound_menu_close.ogg', volume=0.5, loop = 0)
+        from config import toggle_fullscreen
+        cfg.clear_input_queue()
+        toggle_fullscreen()
+        
+def tela_escrita(player_escrita):
+    blt.clear()
+    blt.color('#7b7bf4')
+    blt.printf(18, 0, normal) 
+    blt.printf(18, 0, " ")
+            
+    language.get_localized_text('hoobler3', section='hoobler1', color="#7b7bf4")
+    
+    if player_escrita == True:
+        # Se aparece a mensagem pro jogador digitar, se for False, não mostra
+        language.get_localized_text('hoobler5', section='hoobler1', color="#303047")
+    blt.refresh()
 
 # Final do dialogo 3-1
 def dialogofinal():
-        blt.clear()
-        blt.color('#7b7bf4')
-        blt.printf(18, 0, normal) # Mostra o rosto de Hoobler armazenado na emoção dele no momento
-        blt.printf(18, 0, " ")
-        blt.print(1,3,"> Olá, eu sou Hoobler, como posso te ajudar?")
-        blt.printf(11, 6, '' + r)
-        blt.printf(11, 6, " ")
+        tela_escrita(False)
 
         blt.printf(14, 7, '1) Sobre EgoCorp')
         blt.printf(12, 8, '║ 2) Esfinge       ║')
@@ -540,21 +547,18 @@ def dialogo3():
 
 # Perguntas
 def dialogo2():
-        blt.clear()
-        blt.printf(18, 0, normal) # Mostra o rosto de Hoobler armazenado na emoção dele no momento
-        blt.printf(18, 0, " ")
-        blt.print(1,3,"> Olá, eu sou Hoobler, como posso te ajudar?")
+        tela_escrita(False)
         blt.printf(11, 6, '' + r)
         blt.printf(11, 6, " ")
 
-        blt.printf(14, 7, '1) Sobre EgoCorp')
-        blt.printf(14, 8, '2) Hubriston    ')
-        blt.printf(12, 9, '║ 3) Esfinge       ║')
-        blt.printf(12, 10, '║ 4) Hora          ║')
+        language.get_localized_text('hoobler11', section='hoobler1', color="#7b7bf4")
+        language.get_localized_text('hoobler12', section='hoobler1', color="#7b7bf4")
+        language.get_localized_text('hoobler13', section='hoobler1', color="#7b7bf4")
+        language.get_localized_text('hoobler14', section='hoobler1', color="#7b7bf4")
 
         import config as cfg
         if cfg.game_state['viu_99'] == 1:
-            blt.printf(12, 11, '║ 5) Página 99     ║')
+            language.get_localized_text('hoobler15', section='hoobler1', color="#7b7bf4")
             blt.printf(12, 12, '╚══════════════════╝')
         else:
             blt.printf(12, 11, '╚══════════════════╝')
@@ -564,82 +568,96 @@ def dialogo2():
         sair()
 
         if key == blt.TK_1:
-            blt.clear()
-            blt.printf(18, 0, normal) 
-            blt.printf(18, 0, " ")
-            blt.print(1,3,"> Olá, eu sou Hoobler, como posso te ajudar?")
-            blt.refresh()
-
-            blt.print(1,5, '[color=#303047]Comece a digitar![/color]')
-            blt.refresh()
-            player_type("Quem é EgoCorp e o que é egOS?", 1, 5)
+            tela_escrita(True)
+            
+            if cfg.game_state['current_language'] == 'en': 
+                player_type("What is EgoCorp and egOS?", 1, 5)
+            else:
+                player_type("Quem é EgoCorp e o que é egOS?", 1, 5)
             blt.delay(1000)
 
             blt.color('#7b7bf4')
-            hoobler_type("> EgoCorp é uma empresa de tecnologia", 1, 7, 70)
-            hoobler_type("fundada em 1990. egOS é o sistema operacional", 1, 8, 70)
-            hoobler_type("que essa máquina está usando.", 1, 9, 70)
+            
+            if cfg.game_state['current_language'] == 'en': 
+                hoobler_type("> EgoCorp it's an technology company founded", 1, 7, 70)
+                hoobler_type("in 1990. egOS it's the Operating System that", 1, 8, 70)
+                hoobler_type("this machine is running.", 1, 9, 70)
+            else:
+                hoobler_type("> EgoCorp é uma empresa de tecnologia", 1, 7, 70)
+                hoobler_type("fundada em 1990. egOS é o sistema operacional", 1, 8, 70)
+                hoobler_type("que essa máquina está usando.", 1, 9, 70)
+            
             blt.refresh()
             blt.delay(1000)
             dialogo2()
 
         elif key == blt.TK_2:
-            blt.clear()
-            blt.printf(18, 0, normal) 
-            blt.printf(18, 0, " ")
-            blt.print(1,3,"> Olá, eu sou Hoobler, como posso te ajudar?")
-            blt.refresh()
-
-            blt.print(1,5, '[color=#303047]Comece a digitar![/color]')
-            blt.refresh()
-            player_type("Você sabe quem é Hubriston?", 1, 5)
+            tela_escrita(True)
+            
+            if cfg.game_state['current_language'] == 'en': 
+                player_type("Who is Hubriston?", 1, 5)
+            else:
+                player_type("Você sabe quem é Hubriston?", 1, 5)
             blt.delay(1000)
 
             blt.color('#7b7bf4')
             blt.puts(18, 0, " " * 10)
             blt.printf(20, 0, confused)
-            hoobler_type("> Achei que fosse você...", 1, 7, 70)
-            hoobler_type("> Quem é você?", 1, 8, 70)
+            
+            if cfg.game_state['current_language'] == 'en': 
+                hoobler_type("> Isn't that you?", 1, 7, 70)
+                hoobler_type("> Who are YOU?", 1, 8, 70)
+            else:
+                hoobler_type("> Achei que fosse você...", 1, 7, 70)
+                hoobler_type("> Quem é você?", 1, 8, 70)
+            
             blt.refresh()
             blt.delay(1000)
             dialogo3()
 
         elif key == blt.TK_3:
-            blt.clear()
-            blt.printf(18, 0, normal) 
-            blt.printf(18, 0, " ")
-            blt.print(1,3,"> Olá, eu sou Hoobler, como posso te ajudar?")
-            blt.refresh()
-
-            blt.print(1,5, '[color=#303047]Comece a digitar![/color]')
-            blt.refresh()
-            player_type("Você sabe quem é aquela Esfinge?", 1, 5)
+            tela_escrita(True)
+            
+            if cfg.game_state['current_language'] == 'en': 
+                player_type("Who is the Sphinx?", 1, 5)
+            else:
+                player_type("Você sabe quem é aquela Esfinge?", 1, 5)
+            
             blt.delay(1000)
 
             blt.color('#7b7bf4')
-            hoobler_type("> Não sei dizer com precisão. Eu diria que", 1, 7, 70)
-            hoobler_type("ela é uma anomalia dentro do sistema.", 1, 8, 70)
-            hoobler_type("Mesmo assim, não a considero uma ameaça.", 1, 9, 70)
+            
+            if cfg.game_state['current_language'] == 'en':
+                hoobler_type("> I don't know. I guess she's fine though.", 1, 7, 70)
+                hoobler_type("Probably an anomaly in the system, you know...", 1, 8, 70)
+                hoobler_type("But I don't think she's a threat.", 1, 9, 70)
+            else:
+                hoobler_type("> Não sei dizer com precisão. Eu diria que", 1, 7, 70)
+                hoobler_type("ela é uma anomalia dentro do sistema.", 1, 8, 70)
+                hoobler_type("Mesmo assim, não a considero uma ameaça.", 1, 9, 70)
+                
             blt.refresh()
             blt.delay(1000)
             dialogo2()
 
         elif key == blt.TK_4:
-            blt.clear()
-            blt.printf(18, 0, normal) 
-            blt.printf(18, 0, " ")
-            blt.print(1,3,"> Olá, eu sou Hoobler, como posso te ajudar?")
-            blt.refresh()
-
-            blt.print(1,5, '[color=#303047]Comece a digitar![/color]')
-            blt.refresh()
-            player_type("Por que a hora está parada no EGOTEXT?", 1, 5)
+            tela_escrita(True)
+            
+            if cfg.game_state['current_language'] == 'en': 
+                player_type("Why is the time frozen inside EGOTEXT?", 1, 5)
+            else:
+                player_type("Por que a hora está parada no EGOTEXT?", 1, 5)
             blt.delay(1000)
 
             blt.color('#7b7bf4')
-            hoobler_type("> Como o sistema EGOTEXT não está mais", 1, 7, 70)
-            hoobler_type("funcional, a hora mostrada é a exata", 1, 8, 70)
-            hoobler_type("hora em que o serviço foi terminado.", 1, 9, 70)
+            if cfg.game_state['current_language'] == 'en': 
+                hoobler_type("> As the EGOTEXT system is no longer functional,", 1, 7, 70)
+                hoobler_type("the time shown is the same as the one when the", 1, 8, 70)
+                hoobler_type("servers were turned off.", 1, 9, 70)
+            else:
+                hoobler_type("> Como o sistema EGOTEXT não está mais", 1, 7, 70)
+                hoobler_type("funcional, a hora mostrada é a exata", 1, 8, 70)
+                hoobler_type("hora em que o serviço foi terminado.", 1, 9, 70)
             blt.refresh()
             blt.delay(1000)
             dialogo2()
@@ -651,42 +669,51 @@ def dialogo2():
             if cfg.game_state['enigma_pesquisa'] == 1:
                 dialogo4()
             if cfg.game_state['manual_2'] == 1:
-                blt.clear()
-                blt.printf(18, 0, normal) 
-                blt.printf(18, 0, " ")
-                blt.print(1,3,"> Olá, eu sou Hoobler, como posso te ajudar?")
-                blt.refresh()
-                blt.print(1,5, '[color=#303047]Comece a digitar![/color]')
-                blt.refresh()
-                player_type("O que mudou no manual?", 1, 5)
+                tela_escrita(True)
+            
+                if cfg.game_state['current_language'] == 'en': 
+                    player_type("What has changed in the manual?", 1, 5)
+                else:
+                    player_type("O que mudou no manual?", 1, 5)
                 blt.delay(1000)
                 blt.color('#7b7bf4')
     
-                hoobler_type("> Veja o comando FIND.", 1, 7, 70)
+                if cfg.game_state['current_language'] == 'en': 
+                    hoobler_type("> Take a look at the FIND command.", 1, 7, 70)
+                else:
+                    hoobler_type("> Veja o comando FIND.", 1, 7, 70)
                 blt.refresh()
                 blt.delay(1000)  
                 dialogo2()
             else:
-                blt.printf(18, 0, normal) 
-                blt.printf(18, 0, " ")
-                blt.print(1,3,"> Olá, eu sou Hoobler, como posso te ajudar?")
-                blt.refresh()
-
-                blt.print(1,5, '[color=#303047]Comece a digitar![/color]')
-                blt.refresh()
-                player_type("Qual é a senha da página 99?", 1, 5)
+                tela_escrita(True)
+            
+                if cfg.game_state['current_language'] == 'en': 
+                    player_type("What is the password on page 99?", 1, 5)
+                else:
+                    player_type("Qual é a senha da página 99?", 1, 5)
                 blt.delay(1000)
 
                 blt.color('#7b7bf4')
-                hoobler_type("> Acredito que a resposta para sua pergunta", 1, 7, 70)
-                hoobler_type("esteja dentro do manual de sistema.", 1, 8, 70)
-                blt.delay(1000)
-                hoobler_type("> Espere um pouco.", 1, 9, 70)
-                hoobler_type("> O manual parece estar corrompido.", 1, 10, 70)
-                hoobler_type("> Irei arrumar o que consigo...", 1, 11, 70)
-                blt.delay(1000)
-                cfg.play_sound('sfx/surprise.ogg', volume=0.3, loop = 0)
-                hoobler_type("> Pronto!", 1, 13, 70)
+                if cfg.game_state['current_language'] == 'en': 
+                    hoobler_type("> You should take a look at the system manual.", 1, 7, 70)
+                    blt.delay(1000)
+                    hoobler_type("> Wait a sec...", 1, 9, 70)
+                    hoobler_type("> It seems like the manual is corrupted.", 1, 10, 70)
+                    hoobler_type("> Let me fix it!", 1, 11, 70)
+                    blt.delay(1000)
+                    cfg.play_sound('sfx/surprise.ogg', volume=0.3, loop = 0)
+                    hoobler_type("> Done!", 1, 13, 70)
+                else:
+                    hoobler_type("> Acredito que a resposta para sua pergunta", 1, 7, 70)
+                    hoobler_type("esteja dentro do manual de sistema.", 1, 8, 70)
+                    blt.delay(1000)
+                    hoobler_type("> Espere um pouco.", 1, 9, 70)
+                    hoobler_type("> O manual parece estar corrompido.", 1, 10, 70)
+                    hoobler_type("> Irei arrumar o que consigo...", 1, 11, 70)
+                    blt.delay(1000)
+                    cfg.play_sound('sfx/surprise.ogg', volume=0.3, loop = 0)
+                    hoobler_type("> Pronto!", 1, 13, 70)
                 blt.refresh()
 
                 import config as cfg
@@ -706,19 +733,17 @@ def dialogo2():
 
 # Quem é Hoobler
 def escolha1():
-    blt.clear()
-    blt.printf(18, 0, normal) # Mostra o rosto de Hoobler armazenado na emoção dele no momento
-    blt.printf(18, 0, " ")
-    language.get_localized_text('hoobler3', section='hoobler1', color="#7b7bf4")
-
+    tela_escrita(False)
+    
+    blt.printf(11, 10, '' + r)
+    blt.printf(11, 10, " ")
+        
     language.get_localized_text('hoobler6', section='hoobler1', color="#7b7bf4")
     language.get_localized_text('hoobler7', section='hoobler1', color="#7b7bf4")
     
     language.get_localized_text('hoobler8', section='hoobler1', color="#FFB000")
 
     blt.color('#7b7bf4')
-    blt.printf(11, 10, '' + r)
-    blt.printf(11, 10, " ")
 
     language.get_localized_text('hoobler9', section='hoobler1', color="#7b7bf4")
     blt.refresh()
@@ -747,8 +772,8 @@ def escolha1():
             hoobler_type("Ask me something!", 1, 13, 70)
         else:
             blt.printf(19, 0, happy)
-            hoobler_type("> Qualquer tipo? Se achar melhor, faça", 1, 12, 75)
-            hoobler_type("alguma pergunta!", 1, 13, 75)
+            hoobler_type("> Qualquer tipo! Se achar melhor, faça", 1, 12, 75)
+            hoobler_type("alguma pergunta.", 1, 13, 75)
             
         blt.refresh()
         blt.delay(1500)
@@ -786,14 +811,7 @@ def hoobler():
         sair()
 
         if key == blt.TK_1:
-            blt.clear()
-            blt.printf(18, 0, normal) 
-            blt.printf(18, 0, " ")
-            
-            language.get_localized_text('hoobler3', section='hoobler1', color="#7b7bf4")
-            
-            language.get_localized_text('hoobler5', section='hoobler1', color="#303047")
-            blt.refresh()
+            tela_escrita(True)
 
             if cfg.game_state['current_language'] == 'en': 
                 player_type("Hi... who are you?", 1, 5)

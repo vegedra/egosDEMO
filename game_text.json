@@ -137,7 +137,12 @@
 		"hoobler7": {"text": "duty is to help this machine's owner.", "x": 1, "y": 8},
 		"hoobler8": {"text": "Hi... who are you?", "x": 1, "y": 5},
 		"hoobler9": {"text": "1) Help?", "x": 14, "y": 11},
-		"hoobler10": {"text": "Write something!", "x": 1, "y": 10}
+		"hoobler10": {"text": "Write something!", "x": 1, "y": 10},
+		"hoobler11": {"text": "1) Egocorp", "x": 14, "y": 7},
+		"hoobler12": {"text": "2) Hubriston    ", "x": 14, "y": 8},
+		"hoobler13": {"text": "║ 3) Sphinx        ║", "x": 12, "y": 9},
+		"hoobler14": {"text": "║ 4) Time          ║", "x": 12, "y": 10},
+		"hoobler15": {"text": "║ 5) Page 99       ║", "x": 12, "y": 11}
 	  }
     },
     "pt_BR": {
@@ -278,7 +283,12 @@
 		"hoobler7": {"text": "para auxiliar o dono desta máquina.", "x": 1, "y": 8},
 		"hoobler8": {"text": "Olá... quem é você?", "x": 1, "y": 5},
 		"hoobler9": {"text": "1) Auxiliar?", "x": 14, "y": 11},
-		"hoobler10": {"text": "Comece a digitar!", "x": 1, "y": 10}
+		"hoobler10": {"text": "Comece a digitar!", "x": 1, "y": 10},
+		"hoobler11": {"text": "1) Sobre EgoCorp", "x": 14, "y": 7},
+		"hoobler12": {"text": "2) Hubriston    ", "x": 14, "y": 8},
+		"hoobler13": {"text": "║ 3) Esfinge       ║", "x": 12, "y": 9},
+		"hoobler14": {"text": "║ 4) Hora          ║", "x": 12, "y": 10},
+		"hoobler15": {"text": "║ 5) Página 99     ║", "x": 12, "y": 11}
 	  }
     }
   }
