@@ -36,7 +36,7 @@ def logic():
     if key in (blt.TK_CLOSE, blt.TK_4):      
         sys.exit()
 
-    elif key == blt.TK_1:
+    elif key in (blt.TK_ESCAPE, blt.TK_1): 
         cfg.play_sound('sfx/sound_menu_close.ogg', volume=0.5, loop = 0)
         blt.refresh()
         from desktop.desktop import terminal

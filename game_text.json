@@ -288,7 +288,14 @@
 		"hoobler12": {"text": "2) Hubriston    ", "x": 14, "y": 8},
 		"hoobler13": {"text": "║ 3) Esfinge       ║", "x": 12, "y": 9},
 		"hoobler14": {"text": "║ 4) Hora          ║", "x": 12, "y": 10},
-		"hoobler15": {"text": "║ 5) Página 99     ║", "x": 12, "y": 11}
+		"hoobler15": {"text": "║ 5) Página 99     ║", "x": 12, "y": 11},
+		"hoobler16": {"text": "Você sabe quem é Hubriston?", "x": 1, "y": 5},
+		"hoobler17": {"text": "> Achei que fosse você...", "x": 1, "y": 7},
+		"hoobler18": {"text": "> Quem é você?", "x": 1, "y": 8},
+		"hoobler19": {"text": "1) Um policial", "x": 14, "y": 11},
+		"hoobler20": {"text": "2) Alguém curioso", "x": 14, "y": 12},
+		"hoobler21": {"text": "║ 3) Não importa   ║", "x": 12, "y": 13},
+		"hoobler22": {"text": "", "x": 12, "y": 11}
 	  }
     }
   }

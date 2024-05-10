@@ -4,7 +4,6 @@ from hoobler.hoobler_core import *
 import config as cfg
 import language
 
-# Facilitar minha vida
 def sair():
     global key
     key = blt.read()
@@ -28,19 +27,6 @@ def sair():
         from config import toggle_fullscreen
         cfg.clear_input_queue()
         toggle_fullscreen()
-        
-def tela_escrita(player_escrita):
-    blt.clear()
-    blt.color('#7b7bf4')
-    blt.printf(18, 0, normal) 
-    blt.printf(18, 0, " ")
-            
-    language.get_localized_text('hoobler3', section='hoobler1', color="#7b7bf4")
-    
-    if player_escrita == True:
-        # Se aparece a mensagem pro jogador digitar, se for False, não mostra
-        language.get_localized_text('hoobler5', section='hoobler1', color="#303047")
-    blt.refresh()
 
 # Final do dialogo 3-1
 def dialogofinal():
@@ -441,97 +427,84 @@ def dialogo4():
 # Quem é você?
 def dialogo3():
     blt.clear()
-    blt.puts(18, 0, " " * 10)
-    blt.printf(20, 0, confused) # Mostra o rosto de Hoobler armazenado na emoção dele no momento
-    #blt.printf(18, 0, " ")
-    blt.print(1,3,"> Olá, eu sou Hoobler, como posso te ajudar?")
-
-    blt.print(1, 5, "[color=#FFB000]Você sabe quem é Hubriston?[/color]")
-    blt.print(1,7, "> Achei que fosse você...")
-    blt.print(1,8, "> Quem é você?")
+    tela_escrita(False, confused, 0, 20, 1)
 
     blt.printf(11, 10, '' + r)
     blt.printf(11, 10, " ")
 
-    blt.printf(14, 11, '1) Um policial')
-    blt.printf(14, 12, '2) Alguém curioso')
-    blt.printf(12, 13, '║ 3) Não importa   ║')
+    language.get_localized_text('hoobler19', section='hoobler1', color="#7b7bf4")
+    language.get_localized_text('hoobler20', section='hoobler1', color="#7b7bf4")
+    language.get_localized_text('hoobler21', section='hoobler1', color="#7b7bf4")
     blt.printf(12, 14, '╚══════════════════╝')
     blt.refresh()
 
     sair()
 
     if key == blt.TK_1:
-            blt.clear()
-            blt.printf(20, 0, confused)
-            blt.print(1,3,"> Olá, eu sou Hoobler, como posso te ajudar?")
-            blt.refresh()
+            tela_escrita(True, confused, 2, 20, 1)
 
-            blt.print(1, 5, "[color=#FFB000]Você sabe quem é Hubriston?[/color]")
-            blt.print(1,7, "> Achei que fosse você...")
-            blt.print(1,8, "> Quem é você?")
-
-            blt.print(1,10, '[color=#303047]Comece a digitar![/color]')
-            blt.refresh()
-            player_type("Eu sou um policial.", 1, 10)
+            if cfg.game_state['current_language'] == 'en':
+                player_type("I'm from the police.", 1, 10)
+            else:
+                player_type("Eu sou um policial.", 1, 10)
             blt.delay(1000)
 
             blt.color('#7b7bf4')
             blt.printf(18, 0, normal) # Mostra o rosto de Hoobler armazenado na emoção dele no momento
             blt.printf(18, 0, " ")
 
-            hoobler_type("> Entendo, por favor, não me prenda...", 1, 12, 70)
-            hoobler_type("mas não tenho permissão de te contar.", 1, 13, 70)
+            if cfg.game_state['current_language'] == 'en':
+                hoobler_type("> Oh, ok... don't arrest me, but", 1, 12, 70)
+                hoobler_type("I can't tell you.", 1, 13, 70)
+            else: 
+                hoobler_type("> Entendo, por favor, não me prenda...", 1, 12, 70)
+                hoobler_type("mas não tenho permissão de te contar.", 1, 13, 70)
             blt.refresh()
             blt.delay(1000)
             dialogo5()
 
     elif key == blt.TK_2:
-            blt.clear()
-            #blt.puts(18, 0, " " * 10)
-            blt.printf(20, 0, confused)
-            blt.print(1,3,"> Olá, eu sou Hoobler, como posso te ajudar?")
-            blt.refresh()
+            tela_escrita(True, confused, 2, 20, 1)
 
-            blt.print(1, 5, "[color=#FFB000]Você sabe quem é Hubriston?[/color]")
-            blt.print(1,7, "> Achei que fosse você...")
-            blt.print(1,8, "> Quem é você?")
-
-            blt.print(1,10, '[color=#303047]Comece a digitar![/color]')
-            blt.refresh()
-            player_type("Apenas alguém curioso.", 1, 10)
+            if cfg.game_state['current_language'] == 'en':
+                player_type("`Just curious.", 1, 10)
+            else:
+                player_type("Apenas alguém curioso.", 1, 10)
             blt.delay(1000)
 
             blt.color('#7b7bf4')
             blt.printf(19, 0, cat)
-            hoobler_type("> A curiosidade matou o gato, sabia?", 1, 12, 70)
+            if cfg.game_state['current_language'] == 'en':
+                hoobler_type("> Did you know that curiosity killed", 1, 12, 70)
+                hoobler_type("the cat?", 1, 13, 70)
+            else:
+                hoobler_type("> A curiosidade matou o gato, sabia?", 1, 12, 70)
             cfg.play_sound('sfx/cat.ogg', volume=0.5, loop = 0)
             blt.refresh()
             blt.delay(2000)
             dialogo3()
 
     elif key == blt.TK_3:
-            blt.clear()
-            blt.printf(20, 0, confused)
-            blt.print(1,3,"> Olá, eu sou Hoobler, como posso te ajudar?")
-            blt.refresh()
+            tela_escrita(True, confused, 2, 20, 1)
 
-            blt.print(1, 5, "[color=#FFB000]Você sabe quem é Hubriston?[/color]")
-            blt.print(1,7, "> Achei que fosse você...")
-            blt.print(1,8, "> Quem é você?")
-
-            blt.print(1,10, '[color=#303047]Comece a digitar![/color]')
-            blt.refresh()
-            player_type("Não importa, me conte o que sabe.", 1, 10)
+            if cfg.game_state['current_language'] == 'en':
+                player_type("It doesn't matter, tell me what you know.", 1, 10)
+            else: 
+                player_type("Não importa, me conte o que sabe.", 1, 10)
             blt.delay(1000)
 
             blt.color('#7b7bf4')
             blt.printf(18, 0, normal) # Mostra o rosto de Hoobler armazenado na emoção dele no momento
             blt.printf(18, 0, " ")
 
-            hoobler_type("> Por motivos de privacidade, não posso", 1, 12, 70)
-            hoobler_type("te passar informações pessoais sobre o ", 1, 13, 70)
-            hoobler_type("dono desta máquina.", 1, 14, 70)
+            if cfg.game_state['current_language'] == 'en':
+                hoobler_type("> For privacy reasons, I cannot tell you", 1, 12, 70)
+                hoobler_type("personal information from the machine's", 1, 13, 70)
+                hoobler_type("owner.", 1, 14, 70)
+            else:
+                hoobler_type("> Por motivos de privacidade, não posso", 1, 12, 70)
+                hoobler_type("te passar informações pessoais sobre o ", 1, 13, 70)
+                hoobler_type("dono desta máquina.", 1, 14, 70)
             blt.refresh()
             blt.delay(1000)
             dialogo5_2()
@@ -547,7 +520,7 @@ def dialogo3():
 
 # Perguntas
 def dialogo2():
-        tela_escrita(False)
+        tela_escrita(False, normal, 0, 18, 0)
         blt.printf(11, 6, '' + r)
         blt.printf(11, 6, " ")
 
@@ -568,7 +541,7 @@ def dialogo2():
         sair()
 
         if key == blt.TK_1:
-            tela_escrita(True)
+            tela_escrita(True, normal, 1, 18, 0)
             
             if cfg.game_state['current_language'] == 'en': 
                 player_type("What is EgoCorp and egOS?", 1, 5)
@@ -592,7 +565,7 @@ def dialogo2():
             dialogo2()
 
         elif key == blt.TK_2:
-            tela_escrita(True)
+            tela_escrita(True, normal, 1, 18, 0)
             
             if cfg.game_state['current_language'] == 'en': 
                 player_type("Who is Hubriston?", 1, 5)
@@ -616,7 +589,7 @@ def dialogo2():
             dialogo3()
 
         elif key == blt.TK_3:
-            tela_escrita(True)
+            tela_escrita(True, normal, 1, 18, 0)
             
             if cfg.game_state['current_language'] == 'en': 
                 player_type("Who is the Sphinx?", 1, 5)
@@ -641,7 +614,7 @@ def dialogo2():
             dialogo2()
 
         elif key == blt.TK_4:
-            tela_escrita(True)
+            tela_escrita(True, normal, 1, 18)
             
             if cfg.game_state['current_language'] == 'en': 
                 player_type("Why is the time frozen inside EGOTEXT?", 1, 5)
@@ -669,7 +642,7 @@ def dialogo2():
             if cfg.game_state['enigma_pesquisa'] == 1:
                 dialogo4()
             if cfg.game_state['manual_2'] == 1:
-                tela_escrita(True)
+                tela_escrita(True, normal, 1, 18, 0)
             
                 if cfg.game_state['current_language'] == 'en': 
                     player_type("What has changed in the manual?", 1, 5)
@@ -686,7 +659,7 @@ def dialogo2():
                 blt.delay(1000)  
                 dialogo2()
             else:
-                tela_escrita(True)
+                tela_escrita(True, normal, 1, 18, 0)
             
                 if cfg.game_state['current_language'] == 'en': 
                     player_type("What is the password on page 99?", 1, 5)
@@ -733,7 +706,7 @@ def dialogo2():
 
 # Quem é Hoobler
 def escolha1():
-    tela_escrita(False)
+    tela_escrita(False, normal, 0, 18, 0)
     
     blt.printf(11, 10, '' + r)
     blt.printf(11, 10, " ")
@@ -786,7 +759,6 @@ def escolha1():
 def hoobler():
     blt.clear()
     blt.set(f"window.title='Hoobler'; window.size=46x15")
-    global key
     
     cfg.play_music('bgm/hoobler1.ogg', volume=0.9, loop=-1, crossfade_duration=100)
 
@@ -811,7 +783,7 @@ def hoobler():
         sair()
 
         if key == blt.TK_1:
-            tela_escrita(True)
+            tela_escrita(True, normal, 1, 18, 0)
 
             if cfg.game_state['current_language'] == 'en': 
                 player_type("Hi... who are you?", 1, 5)

@@ -1,6 +1,7 @@
 from bearlibterminal import terminal as blt
 from pygame import mixer
 import config as cfg
+import language
 
 # Carrega o txt contendo os rostos de Hoobler
 with open('res/hoobler.txt', 'r', encoding="utf-8") as f:
@@ -16,7 +17,33 @@ angry = lines[4]
 sad = lines[6]
 confused = lines[8]
 cat = lines[10]
-
+        
+def tela_escrita(player_escrita, face, escrita, x, texto):
+    blt.clear()
+    blt.color('#7b7bf4')
+    blt.puts(18, 0, " " * 10)
+    blt.printf(x, 0, face) 
+    blt.printf(x, 0, " ")
+            
+    language.get_localized_text('hoobler3', section='hoobler1', color="#7b7bf4")
+    
+    if texto == 1:
+        language.get_localized_text('hoobler16', section='hoobler1', color="#FFB000")
+        language.get_localized_text('hoobler17', section='hoobler1', color="#7b7bf4")
+        language.get_localized_text('hoobler18', section='hoobler1', color="#7b7bf4")
+    else: 
+        pass
+    
+    if player_escrita == True:
+        if escrita == 1:
+            # Se aparece a mensagem pro jogador digitar, se for False, não mostra
+            language.get_localized_text('hoobler5', section='hoobler1', color="#303047")
+        if escrita == 2:
+            language.get_localized_text('hoobler10', section='hoobler1', color="#303047")
+        else:
+            pass
+    blt.refresh()
+    
 # Função que faz as falas de Hoobler terem uma animação de 'typerwritter'
 def hoobler_type(text, x, y, tempo):
     # Posição do texto
