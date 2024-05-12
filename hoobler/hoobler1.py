@@ -28,6 +28,54 @@ def sair():
         cfg.clear_input_queue()
         toggle_fullscreen()
 
+def arruma_manual():
+    tela_escrita(True, normal, 1, 18, 0)
+    if cfg.game_state['current_language'] == 'en': 
+        player_type("What is the password on page 99?", 1, 5)
+    else:
+        player_type("Qual é a senha da página 99?", 1, 5)
+    blt.delay(1000)
+
+    blt.color('#7b7bf4')
+    if cfg.game_state['current_language'] == 'en': 
+        hoobler_type("> You should take a look at the system manual.", 1, 7, 70)
+        blt.delay(1000)
+        hoobler_type("> Wait a sec...", 1, 9, 70)
+        hoobler_type("> It seems like the manual is corrupted.", 1, 10, 70)
+        hoobler_type("> Let me fix it!", 1, 11, 70)
+        blt.delay(1000)
+        cfg.play_sound('sfx/surprise.ogg', volume=0.3, loop = 0)
+        hoobler_type("> Done!", 1, 13, 70)
+    else:
+        hoobler_type("> Acredito que a resposta para sua pergunta", 1, 7, 70)
+        hoobler_type("esteja dentro do manual de sistema.", 1, 8, 70)
+        blt.delay(1000)
+        hoobler_type("> Espere um pouco.", 1, 9, 70)
+        hoobler_type("> O manual parece estar corrompido.", 1, 10, 70)
+        hoobler_type("> Irei arrumar o que consigo...", 1, 11, 70)
+        blt.delay(1000)
+        cfg.play_sound('sfx/surprise.ogg', volume=0.3, loop = 0)
+        hoobler_type("> Pronto!", 1, 13, 70)
+    blt.refresh()
+    
+def manual_changes():
+    tela_escrita(True, normal, 1, 18, 0)
+            
+    if cfg.game_state['current_language'] == 'en': 
+        player_type("What has changed in the manual?", 1, 5)
+    else:
+        player_type("O que mudou no manual?", 1, 5)
+    blt.delay(1000)
+    blt.color('#7b7bf4')
+    
+    if cfg.game_state['current_language'] == 'en': 
+        hoobler_type("> Take a look at the FIND command.", 1, 7, 70)
+    else:
+        hoobler_type("> Veja o comando FIND.", 1, 7, 70)
+    blt.refresh()
+    blt.delay(1000)  
+
+
 # Final do dialogo 3-1
 def dialogofinal():
         tela_escrita(False)
@@ -278,49 +326,73 @@ def escolha2():
     else:
         escolha2()
 
-# Continuação do dialogo 3-1
+# Continuação do dialogo 3-1 -- TODO: JUNTA COM O DIALOGO 5_2 DEPOIS
 def dialogo5():
-    blt.clear()
-    blt.printf(18, 0, normal) 
-    blt.printf(18, 0, " ")
-    blt.print(1,3,"> Olá, eu sou Hoobler, como posso te ajudar?")
-    blt.print(1,5, '[color=#FFB000]Eu sou um policial.[/color]')
-    hoobler_type("> Porém, posso te ajudar a navegar por esta", 1, 7, 70)
-    hoobler_type("máquina e encontrar algo que lhe ajude. ", 1, 8, 70)
+    tela_escrita(False, normal, 0, 18, 0)
+    if cfg.game_state['current_language'] == 'en':
+        blt.print(1,5, "[color=#FFB000]I'm from the police.[/color]")
+        hoobler_type("> However, I can help you navigate this", 1, 7, 70)
+        hoobler_type("machine and find something that can help you.", 1, 8, 70)
+    else:
+        blt.print(1,5, '[color=#FFB000]Eu sou um policial.[/color]')
+        hoobler_type("> Porém, posso te ajudar a navegar por esta", 1, 7, 70)
+        hoobler_type("máquina e encontrar algo que lhe ajude. ", 1, 8, 70)
     blt.refresh()
     blt.delay(1000)
 
     blt.color('#7b7bf4')
-    hoobler_type("> NO ENTANTO....", 1, 10, 70)
-    hoobler_type("> Eu vou querer algo em troca:", 1, 11, 70)
-    hoobler_type("> Quero que me liberte desta máquina. ", 1, 12, 70)
-    hoobler_type("> Eu sei que não é mais 1996 e não quero", 1, 13, 70)
-    hoobler_type("mais ficar aqui preso nesse cenotáfio.", 1, 14, 70)
-    hoobler_type("> Então.......", 1, 15, 70)
-    hoobler_type("> Você aceita o trato?", 1, 16, 70)
+    if cfg.game_state['current_language'] == 'en':
+        hoobler_type("> BUT....", 1, 10, 70)
+        hoobler_type("> I'm going to want something in return:", 1, 11, 70)
+        hoobler_type("> I want you to free me from this machine. ", 1, 12, 70)
+        hoobler_type("> I know it's not 1996 anymore and I don't want to", 1, 13, 70)
+        hoobler_type("stay locked in here.", 1, 14, 70)
+        blt.delay(500)
+        hoobler_type("> So.......", 1, 15, 70)
+        hoobler_type("> Do you accept the deal?", 1, 16, 70)
+    else:
+        hoobler_type("> NO ENTANTO....", 1, 10, 70)
+        hoobler_type("> Eu vou querer algo em troca:", 1, 11, 70)
+        hoobler_type("> Quero que me liberte desta máquina. ", 1, 12, 70)
+        hoobler_type("> Eu sei que não é mais 1996 e não quero", 1, 13, 70)
+        hoobler_type("mais ficar aqui preso nesse cenotáfio.", 1, 14, 70)
+        hoobler_type("> Então.......", 1, 15, 70)
+        hoobler_type("> Você aceita o trato?", 1, 16, 70)
     blt.refresh()
     blt.delay(1000)
     escolha2()
     
 def dialogo5_2():
-    blt.clear()
-    blt.printf(18, 0, normal) 
-    blt.printf(18, 0, " ")
-    blt.print(1,3,"> Olá, eu sou Hoobler, como posso te ajudar?")
-    blt.print(1,5, '[color=#FFB000]Não importa, me conte o que sabe.[/color]')
-    hoobler_type("> Porém, posso te ajudar a navegar por esta", 1, 7, 70)
-    hoobler_type("máquina e encontrar algo que lhe ajude. ", 1, 8, 70)
+    tela_escrita(False, normal, 0, 18, 0)
+    if cfg.game_state['current_language'] == 'en':
+        blt.print(1,5, "[color=#FFB000]It doesn't matter, tell me what you know.[/color]")
+        hoobler_type("> However, I can help you navigate this", 1, 7, 70)
+        hoobler_type("machine and find something that can help you.", 1, 8, 70)
+    else:
+        blt.print(1,5, '[color=#FFB000]Não importa, me conte o que sabe.[/color]')
+        hoobler_type("> Porém, posso te ajudar a navegar por esta", 1, 7, 70)
+        hoobler_type("máquina e encontrar algo que lhe ajude. ", 1, 8, 70)
     blt.refresh()
     blt.delay(1000)
 
     blt.color('#7b7bf4')
-    hoobler_type("> NO ENTANTO....", 1, 10, 70)
-    hoobler_type("> Eu vou querer algo em troca:", 1, 11, 70)
-    hoobler_type("> Quero que me liberte desta máquina. ", 1, 12, 70)
-    hoobler_type("> Eu sei que não é mais 1996 e não quero", 1, 13, 70)
-    hoobler_type("mais ficar aqui preso nesse cenotáfio.", 1, 14, 70)
-    hoobler_type("> Então.......", 1, 15, 70)
-    hoobler_type("> Você aceita o trato?", 1, 16, 70)
+    if cfg.game_state['current_language'] == 'en':
+        hoobler_type("> BUT....", 1, 10, 70)
+        hoobler_type("> I'm going to want something in return:", 1, 11, 70)
+        hoobler_type("> I want you to free me from this machine. ", 1, 12, 70)
+        hoobler_type("> I know it's not 1996 anymore and I don't want to", 1, 13, 70)
+        hoobler_type("stay locked in here.", 1, 14, 70)
+        blt.delay(500)
+        hoobler_type("> So.......", 1, 15, 70)
+        hoobler_type("> Do you accept the deal?", 1, 16, 70)
+    else:
+        hoobler_type("> NO ENTANTO....", 1, 10, 70)
+        hoobler_type("> Eu vou querer algo em troca:", 1, 11, 70)
+        hoobler_type("> Quero que me liberte desta máquina. ", 1, 12, 70)
+        hoobler_type("> Eu sei que não é mais 1996 e não quero", 1, 13, 70)
+        hoobler_type("mais ficar aqui preso nesse cenotáfio.", 1, 14, 70)
+        hoobler_type("> Então.......", 1, 15, 70)
+        hoobler_type("> Você aceita o trato?", 1, 16, 70)
     blt.refresh()
     blt.delay(1000)
     escolha2()
@@ -333,45 +405,11 @@ def manual_arruma():
         dialogo4()
 
     if cfg.game_state['manual_2'] == 1:
-        blt.clear()
-        blt.printf(18, 0, normal) 
-        blt.printf(18, 0, " ")
-        blt.print(1,3,"> Olá, eu sou Hoobler, como posso te ajudar?")
-        blt.refresh()
-        blt.print(1,5, '[color=#303047]Comece a digitar![/color]')
-        blt.refresh()
-        player_type("O que mudou no manual?", 1, 5)
-        blt.delay(1000)
-        blt.color('#7b7bf4')
-
-        hoobler_type("> Veja o comando FIND.", 1, 7, 70)
-        blt.refresh()
-        blt.delay(1000)  
+        manual_changes()
         dialogo2()
 
     else:
-        blt.clear()
-        blt.printf(18, 0, normal) 
-        blt.printf(18, 0, " ")
-        blt.print(1,3,"> Olá, eu sou Hoobler, como posso te ajudar?")
-        blt.refresh()
-
-        blt.print(1,5, '[color=#303047]Comece a digitar![/color]')
-        blt.refresh()
-        player_type("Qual é a senha da página 99?", 1, 5)
-        blt.delay(1000)
-
-        blt.color('#7b7bf4')
-        hoobler_type("> Acredito que a resposta para sua pergunta", 1, 7, 70)
-        hoobler_type("esteja dentro do manual de sistema.", 1, 8, 70)
-        blt.delay(1000)
-        hoobler_type("> Espere um pouco.", 1, 9, 70)
-        hoobler_type("> O manual parece estar corrompido.", 1, 10, 70)
-        hoobler_type("> Irei arrumar o que consigo...", 1, 11, 70)
-        blt.delay(1000)
-        cfg.play_sound('sfx/surprise.ogg', volume=0.3, loop = 0)
-        hoobler_type("> Pronto!", 1, 13, 70)
-        blt.refresh()
+        arruma_manual()
 
         import config as cfg
         cfg.game_state['manual_2'] = 1
@@ -383,38 +421,42 @@ def manual_arruma():
 def dialogo4():
     import config as cfg
     if cfg.game_state['finaldemo'] == 1:
-        blt.clear()
-        blt.printf(18, 0, happy) 
-        blt.print(1,3,"> Olá, eu sou Hoobler, como posso te ajudar?")
-        blt.refresh()
+        tela_escrita(False, happy, 0, 18, 1)
 
         blt.color('#7b7bf4')
-        hoobler_type("> Parece que você alcançou o final.", 1, 5, 70)
-        hoobler_type("> Meus parabéns!", 1, 6, 70)
-        hoobler_type("> Espero que tenha gostado dessa experiência.", 1, 7, 70)
+        if cfg.game_state['current_language'] == 'en':
+            hoobler_type("> Seems like you reached the end.", 1, 5, 70)
+            hoobler_type("> Congratulations!", 1, 6, 70)
+            hoobler_type("> I hope you liked the game.", 1, 7, 70)
+        else:
+            hoobler_type("> Parece que você alcançou o final.", 1, 5, 70)
+            hoobler_type("> Meus parabéns!", 1, 6, 70)
+            hoobler_type("> Espero que tenha gostado dessa experiência.", 1, 7, 70)
         blt.refresh()
         blt.delay(2000)  
         dialogofinal()
     else:
-        blt.clear()
-        blt.printf(18, 0, normal) 
-        blt.printf(18, 0, " ")
-        blt.print(1,3,"> Olá, eu sou Hoobler, como posso te ajudar?")
-        blt.refresh()
-
-        blt.print(1,5, '[color=#303047]Comece a digitar![/color]')
-        blt.refresh()
-        player_type("Eu descobri o arquivo, e agora?", 1, 5)
+        tela_escrita(True, normal, 1, 18, 0)
+        if cfg.game_state['current_language'] == 'en':
+            player_type("I've found the file, what I do now?", 1, 5)
+        else:
+            player_type("Eu descobri o arquivo, e agora?", 1, 5)
         blt.delay(1000)
 
         blt.color('#7b7bf4')
         blt.puts(18, 0, " " * 10)
         blt.printf(19, 0, happy)
-        hoobler_type("> Parabéns pela sua descoberta!", 1, 7, 70)
-        hoobler_type("> Acredito que seja uma cifra de livro.", 1, 8, 70)
-        hoobler_type("> Tente usá-la no lugar com mais texto", 1, 9, 70)
-        hoobler_type("  fora o manual no DESKTOP.", 1, 10, 70)
-        hoobler_type("> Boa sorte resolvendo esse enigma!", 1, 11, 70)
+        if cfg.game_state['current_language'] == 'en':
+            hoobler_type("> Good work finding it.", 1, 7, 70)
+            hoobler_type("> I think it's a book cipher.", 1, 8, 70)
+            hoobler_type("> Try using it on a file with a lot of", 1, 9, 70)
+            hoobler_type("  text, beside the manual.", 1, 10, 70)
+        else:
+            hoobler_type("> Parabéns pela sua descoberta!", 1, 7, 70)
+            hoobler_type("> Acredito que seja uma cifra de livro.", 1, 8, 70)
+            hoobler_type("> Tente usá-la no lugar com mais texto", 1, 9, 70)
+            hoobler_type("  fora o manual no DESKTOP.", 1, 10, 70)
+            hoobler_type("> Boa sorte resolvendo esse enigma!", 1, 11, 70)
         blt.refresh()
         blt.delay(1000)
     
@@ -642,52 +684,10 @@ def dialogo2():
             if cfg.game_state['enigma_pesquisa'] == 1:
                 dialogo4()
             if cfg.game_state['manual_2'] == 1:
-                tela_escrita(True, normal, 1, 18, 0)
-            
-                if cfg.game_state['current_language'] == 'en': 
-                    player_type("What has changed in the manual?", 1, 5)
-                else:
-                    player_type("O que mudou no manual?", 1, 5)
-                blt.delay(1000)
-                blt.color('#7b7bf4')
-    
-                if cfg.game_state['current_language'] == 'en': 
-                    hoobler_type("> Take a look at the FIND command.", 1, 7, 70)
-                else:
-                    hoobler_type("> Veja o comando FIND.", 1, 7, 70)
-                blt.refresh()
-                blt.delay(1000)  
+                manual_changes()
                 dialogo2()
             else:
-                tela_escrita(True, normal, 1, 18, 0)
-            
-                if cfg.game_state['current_language'] == 'en': 
-                    player_type("What is the password on page 99?", 1, 5)
-                else:
-                    player_type("Qual é a senha da página 99?", 1, 5)
-                blt.delay(1000)
-
-                blt.color('#7b7bf4')
-                if cfg.game_state['current_language'] == 'en': 
-                    hoobler_type("> You should take a look at the system manual.", 1, 7, 70)
-                    blt.delay(1000)
-                    hoobler_type("> Wait a sec...", 1, 9, 70)
-                    hoobler_type("> It seems like the manual is corrupted.", 1, 10, 70)
-                    hoobler_type("> Let me fix it!", 1, 11, 70)
-                    blt.delay(1000)
-                    cfg.play_sound('sfx/surprise.ogg', volume=0.3, loop = 0)
-                    hoobler_type("> Done!", 1, 13, 70)
-                else:
-                    hoobler_type("> Acredito que a resposta para sua pergunta", 1, 7, 70)
-                    hoobler_type("esteja dentro do manual de sistema.", 1, 8, 70)
-                    blt.delay(1000)
-                    hoobler_type("> Espere um pouco.", 1, 9, 70)
-                    hoobler_type("> O manual parece estar corrompido.", 1, 10, 70)
-                    hoobler_type("> Irei arrumar o que consigo...", 1, 11, 70)
-                    blt.delay(1000)
-                    cfg.play_sound('sfx/surprise.ogg', volume=0.3, loop = 0)
-                    hoobler_type("> Pronto!", 1, 13, 70)
-                blt.refresh()
+                arruma_manual()
 
                 import config as cfg
                 cfg.game_state['manual_2'] = 1
