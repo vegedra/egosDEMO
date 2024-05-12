@@ -78,7 +78,7 @@ def manual_changes():
 
 # Final do dialogo 3-1
 def dialogofinal():
-        tela_escrita(False)
+        tela_escrita(True, normal, 2, 18, 0)
 
         blt.printf(14, 7, '1) Sobre EgoCorp')
         blt.printf(12, 8, '║ 2) Esfinge       ║')
@@ -656,7 +656,7 @@ def dialogo2():
             dialogo2()
 
         elif key == blt.TK_4:
-            tela_escrita(True, normal, 1, 18)
+            tela_escrita(True, normal, 1, 18, 0)
             
             if cfg.game_state['current_language'] == 'en': 
                 player_type("Why is the time frozen inside EGOTEXT?", 1, 5)
