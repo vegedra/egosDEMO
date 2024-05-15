@@ -16,7 +16,8 @@ game_state = {
     'find_password': 0, # O jogador precisa achar primeiro a senha para poder abrí-la
     'trato_hoobler': 0, # Se o jogador já falou sobre o Hubriston com o Hoobler
     'current_language': None,  # Defina o idioma padrão aqui - pt_BR ; en
-    'options_toDesktop': 0  # Pro jogador voltar pro desktop ou menu inicial quando fecha as configuraçao
+    'options_toDesktop': 0,  # Pro jogador voltar pro desktop ou menu inicial quando fecha as configuraçao
+    'hoobler_menu': 0, #caixa de dialogo padrao do hoobler
     }
 
 is_fullscreen = False

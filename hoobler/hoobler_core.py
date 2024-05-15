@@ -31,6 +31,9 @@ def tela_escrita(player_escrita, face, escrita, x, texto):
         language.get_localized_text('hoobler16', section='hoobler1', color="#FFB000")
         language.get_localized_text('hoobler17', section='hoobler1', color="#7b7bf4")
         language.get_localized_text('hoobler18', section='hoobler1', color="#7b7bf4")
+    if texto == 2:
+        language.get_localized_text('hoobler16', section='hoobler1', color="#FFB000")
+        language.get_localized_text('hoobler22', section='hoobler1', color="#7b7bf4")
     else: 
         pass
     
@@ -66,6 +69,11 @@ def hoobler_type(text, x, y, tempo):
                 from desktop.desktop import terminal
                 cfg.clear_input_queue()
                 terminal()
+            elif key == blt.TK_F4:
+                cfg.play_sound('sfx/sound_menu_close.ogg', volume=0.5, loop = 0)
+                from config import toggle_fullscreen
+                toggle_fullscreen()
+                cfg.clear_input_queue()
             cfg.clear_input_queue()
 
 # Função que faz o jogador "escrever" a própria fala, tipo no jogo 'Emily is Away'

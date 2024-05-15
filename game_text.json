@@ -142,7 +142,24 @@
 		"hoobler12": {"text": "2) Hubriston    ", "x": 14, "y": 8},
 		"hoobler13": {"text": "║ 3) Sphinx        ║", "x": 12, "y": 9},
 		"hoobler14": {"text": "║ 4) Time          ║", "x": 12, "y": 10},
-		"hoobler15": {"text": "║ 5) Page 99       ║", "x": 12, "y": 11}
+		"hoobler15": {"text": "║ 5) Page 99       ║", "x": 12, "y": 11},
+		"hoobler16": {"text": "Who is Hubriston?", "x": 1, "y": 5},
+		"hoobler17": {"text": "> Isn't that you?", "x": 1, "y": 7},
+		"hoobler18": {"text": "> Who are YOU?", "x": 1, "y": 8},
+		"hoobler19": {"text": "1) Police", "x": 14, "y": 11},
+		"hoobler20": {"text": "2) Just curious", "x": 14, "y": 12},
+		"hoobler21": {"text": "║ 3) Don't matter  ║", "x": 12, "y": 13}, 
+		"hoobler22": {"text": "> Do you accept the deal?", "x": 1, "y": 7},
+		"hoobler23": {"text": "1) Yes", "x": 14, "y": 10},
+		"hoobler24": {"text": "2) No", "x": 14, "y": 11},
+		"hoobler25": {"text": "I'm from the police.", "x": 1, "y": 5},
+		"hoobler26": {"text": "It doesn't matter, tell me what you know.", "x": 1, "y": 5},
+		"hoobler27": {"text": "Write something!", "x": 1, "y": 9},
+		"hoobler28": {"text": "> Oopsie, wrong choice!", "x": 1, "y": 7},
+		"hoobler29": {"text": "I accept, I'm counting on you.", "x": 1, "y": 3},
+		"hoobler30": {"text": "║ 4) Page 99     ║", "x": 12, "y": 10},
+		"hoobler31": {"text": "║ 2) Sphinx        ║", "x": 12, "y": 8},
+		"hoobler32": {"text": "║ 3) Time          ║", "x": 12, "y": 9}
 	  }
     },
     "pt_BR": {
@@ -295,7 +312,17 @@
 		"hoobler19": {"text": "1) Um policial", "x": 14, "y": 11},
 		"hoobler20": {"text": "2) Alguém curioso", "x": 14, "y": 12},
 		"hoobler21": {"text": "║ 3) Não importa   ║", "x": 12, "y": 13},
-		"hoobler22": {"text": "", "x": 12, "y": 11}
+		"hoobler22": {"text": "> Você aceita o trato?", "x": 1, "y": 7},
+		"hoobler23": {"text": "1) Sim", "x": 14, "y": 10},
+		"hoobler24": {"text": "2) Não", "x": 14, "y": 11},
+		"hoobler25": {"text": "Eu sou um policial.", "x": 1, "y": 5},
+		"hoobler26": {"text": "Não importa, me conte o que sabe.", "x": 1, "y": 5},
+		"hoobler27": {"text": "Comece a digitar!", "x": 1, "y": 9},
+		"hoobler28": {"text": "> Ops, acho que você apertou errado.", "x": 1, "y": 7},
+		"hoobler29": {"text": "Aceito, conto com você.", "x": 1, "y": 3},
+		"hoobler30": {"text": "║ 4) Página 99     ║", "x": 12, "y": 10},
+		"hoobler31": {"text": "║ 2) Esfinge       ║", "x": 12, "y": 8},
+		"hoobler32": {"text": "║ 3) Hora          ║", "x": 12, "y": 9}
 	  }
     }
   }
