@@ -13,9 +13,9 @@ def logic():
     while True:
         blt.clear()
         if cfg.game_state['current_language'] == 'en': 
-            cfg.ascii_art('res/desktop/thera_en.txt', 3, 4)
+            cfg.ascii_art('res/desktop/thera_en.txt', 3, 4, False)
         else:
-            cfg.ascii_art('res/desktop/thera.txt', 3, 4)
+            cfg.ascii_art('res/desktop/thera.txt', 3, 4, False)
         blt.print(3, 4, " ")
 
         language.get_localized_text('manual1', section='manual', color="#ffb000")

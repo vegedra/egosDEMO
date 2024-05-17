@@ -13,7 +13,7 @@ def logic():
         blt.color('white') 
         language.get_localized_text('welcome5', section='egotext', color="#F73718") 
         blt.printf(20, 0, '777')
-        cfg.ascii_art('res/egotext/otroll.txt', 3, 2)
+        cfg.ascii_art('res/egotext/otroll.txt', 3, 2, False)
         blt.puts(1, 33, " ")
         blt.puts(3, 2, "@B@B@B@B@B@B@B@B@B@B@B@B@B@@@B@B@B@B@B@B@@@B@B@B@@@B@B@B@B@B@B@B@B@B") 
         blt.refresh()

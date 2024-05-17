@@ -42,7 +42,7 @@ def os():
     blt.refresh()
     blt.delay(500)
     cfg.play_sound('sfx/sound_menu_open.ogg', volume=0.5, loop = 0)
-    cfg.ascii_art('res/logo_egocorp.txt', 22, 8)
+    cfg.ascii_art('res/logo_egocorp.txt', 22, 8, False)
     blt.printf(62, 8, '®️')
     blt.printf(63, 8, " ")
     blt.refresh()

@@ -212,7 +212,6 @@ def dialogo6():
     blt.delay(1000)
 
     import config as cfg
-    cfg.game_state['hoobler_menu'] = 1
     cfg.game_state['trato_hoobler'] = 1
 
     manual_arruma_final()
@@ -231,34 +230,37 @@ def escolha2():
     sair()
 
     if key == blt.TK_1:
-            tela_escrita(True, normal, 0, 18, 2)
+        import config as cfg
+        tela_escrita(True, normal, 0, 18, 2)
 
-            language.get_localized_text('hoobler27', section='hoobler1', color="#303047")
-            blt.refresh()
-            if cfg.game_state['current_language'] == 'en':
-                player_type("I accept, I'm counting on you.", 1, 9)
-            else:
-                player_type("Aceito, conto com você.", 1, 9)
-            blt.delay(1000)
+        language.get_localized_text('hoobler27', section='hoobler1', color="#303047")
+        blt.refresh()
+        if cfg.game_state['current_language'] == 'en':
+            player_type("I accept, I'm counting on you.", 1, 9)
+        else:
+            player_type("Aceito, conto com você.", 1, 9)
+        blt.delay(1000)
 
-            blt.color('#7b7bf4')
-            blt.puts(18, 0, " " * 10)
-            blt.printf(19, 0, happy) # Mostra o rosto de Hoobler armazenado na emoção dele no momento
+        blt.color('#7b7bf4')
+        blt.puts(18, 0, " " * 10)
+        blt.printf(19, 0, happy) # Mostra o rosto de Hoobler armazenado na emoção dele no momento
 
-            if cfg.game_state['current_language'] == 'en':
-                hoobler_type("> Great! Just a reminder:", 1, 11, 70)
-            else:
-                hoobler_type("> Ótimo! Lembre-se de que não sou responsável", 1, 11, 70)
-            blt.puts(18, 0, " " * 20)
-            blt.printf(22, 0, ';)')
-            if cfg.game_state['current_language'] == 'en':
-                hoobler_type("I'm not responsible for any damages caused.", 1, 12, 70)
-            else:
-                hoobler_type("por quaisquer danos que possam ocorrer", 1, 12, 70)
-                hoobler_type("durante sua investigação. HA HA.", 1, 13, 70)
-            blt.refresh()
-            blt.delay(2000)
-            dialogo6()
+        cfg.game_state['hoobler_menu'] = 1
+
+        if cfg.game_state['current_language'] == 'en':
+            hoobler_type("> Great! Just a reminder:", 1, 11, 70)
+        else:
+            hoobler_type("> Ótimo! Lembre-se de que não sou responsável", 1, 11, 70)
+        blt.puts(18, 0, " " * 20)
+        blt.printf(22, 0, ';)')
+        if cfg.game_state['current_language'] == 'en':
+            hoobler_type("I'm not responsible for any damages caused.", 1, 12, 70)
+        else:
+            hoobler_type("por quaisquer danos que possam ocorrer", 1, 12, 70)
+            hoobler_type("durante sua investigação. HA HA.", 1, 13, 70)
+        blt.refresh()
+        blt.delay(2000)
+        dialogo6()
 
     elif key == blt.TK_2:
             blt.clear()
@@ -315,7 +317,7 @@ def dialogo5():
         hoobler_type("> Então.......", 1, 15, 70)
         hoobler_type("> Você aceita o trato?", 1, 16, 70)
     blt.refresh()
-    blt.delay(700)
+    blt.delay(1000)
     escolha2()
     
 def dialogo5_2():
@@ -517,31 +519,20 @@ def dialogo3():
         dialogo3()
 
 # Perguntas
-def dialogo2():
+def dialogo2():                    # TODO: ARRUMA ESSA PORRA
         import config as cfg
         tela_escrita(False, normal, 0, 18, 0)
         blt.printf(11, 6, '' + r)
         blt.printf(11, 6, " ")
 
         language.get_localized_text('hoobler11', section='hoobler1', color="#7b7bf4")
-        if cfg.game_state['hoobler_menu'] == 0: 
-            language.get_localized_text('hoobler12', section='hoobler1', color="#7b7bf4")
-            language.get_localized_text('hoobler13', section='hoobler1', color="#7b7bf4")
-            language.get_localized_text('hoobler14', section='hoobler1', color="#7b7bf4")
-        else:
-            language.get_localized_text('hoobler31', section='hoobler1', color="#7b7bf4")
-            language.get_localized_text('hoobler32', section='hoobler1', color="#7b7bf4")
+        language.get_localized_text('hoobler13', section='hoobler1', color="#7b7bf4")
+        language.get_localized_text('hoobler14', section='hoobler1', color="#7b7bf4")
+        language.get_localized_text('hoobler12', section='hoobler1', color="#7b7bf4")
 
-        import config as cfg
         if cfg.game_state['hoobler_menu'] == 1: 
-            language.get_localized_text('hoobler30', section='hoobler1', color="#7b7bf4")
-            blt.printf(12, 11, '╚══════════════════╝')
-
+            blt.printf(12, 10, "║                  ║")
         if cfg.game_state['viu_99'] == 1:
-            if cfg.game_state['hoobler_menu'] == 1: 
-                language.get_localized_text('hoobler30', section='hoobler1', color="#7b7bf4")
-                blt.printf(12, 11, '╚══════════════════╝')
-            else:
                 language.get_localized_text('hoobler15', section='hoobler1', color="#7b7bf4")
                 blt.printf(12, 12, '╚══════════════════╝')
         else:
@@ -576,9 +567,12 @@ def dialogo2():
             dialogo2()
 
         elif key == blt.TK_2:
-          if cfg.game_state['hoobler_menu'] == 1: 
             dialogo_esfinge()
-          else:
+
+        elif key == blt.TK_3:
+            dialogo_hora()
+
+        if key == blt.TK_4 and cfg.game_state['hoobler_menu'] == 0:
             tela_escrita(True, normal, 1, 18, 0)
             
             if cfg.game_state['current_language'] == 'en': 
@@ -602,76 +596,7 @@ def dialogo2():
             blt.delay(1000)
             dialogo3()
 
-        elif key == blt.TK_3:
-          if cfg.game_state['hoobler_menu'] == 1: 
-            dialogo_hora()
-          else:
-            tela_escrita(True, normal, 1, 18, 0)
-            
-            if cfg.game_state['current_language'] == 'en': 
-                player_type("Who is the Sphinx?", 1, 5)
-            else:
-                player_type("Você sabe quem é aquela Esfinge?", 1, 5)
-            
-            blt.delay(1000)
-
-            blt.color('#7b7bf4')
-            
-            if cfg.game_state['current_language'] == 'en':
-                hoobler_type("> I don't know. I guess she's fine though.", 1, 7, 70)
-                hoobler_type("Probably an anomaly in the system, you know...", 1, 8, 70)
-                hoobler_type("But I don't think she's a threat.", 1, 9, 70)
-            else:
-                hoobler_type("> Não sei dizer com precisão. Eu diria que", 1, 7, 70)
-                hoobler_type("ela é uma anomalia dentro do sistema.", 1, 8, 70)
-                hoobler_type("Mesmo assim, não a considero uma ameaça.", 1, 9, 70)
-                
-            blt.refresh()
-            blt.delay(1000)
-            dialogo2()
-
-        elif key == blt.TK_4:
-            # Depois melhora pra n ter q duplicar codigo
-            if cfg.game_state['hoobler_menu'] == 1:
-                blt.clear()
-
-                import config as cfg
-                if cfg.game_state['enigma_pesquisa'] == 1:
-                    dialogo4()
-                if cfg.game_state['manual_2'] == 1:
-                    manual_changes()
-                    dialogo2()
-                else:
-                    arruma_manual()
-
-                    import config as cfg
-                    cfg.game_state['manual_2'] = 1
-
-                    blt.delay(1000)  #ERRO 223
-                    dialogo2()
-            else:
-                tela_escrita(True, normal, 1, 18, 0)
-            
-                if cfg.game_state['current_language'] == 'en': 
-                    player_type("Why is the time frozen inside EGOTEXT?", 1, 5)
-                else:
-                    player_type("Por que a hora está parada no EGOTEXT?", 1, 5)
-                blt.delay(1000)
-
-                blt.color('#7b7bf4')
-                if cfg.game_state['current_language'] == 'en': 
-                    hoobler_type("> As the EGOTEXT system is no longer functional,", 1, 7, 70)
-                    hoobler_type("the time shown is the same as the one when the", 1, 8, 70)
-                    hoobler_type("servers were turned off.", 1, 9, 70)
-                else:
-                    hoobler_type("> Como o sistema EGOTEXT não está mais", 1, 7, 70)
-                    hoobler_type("funcional, a hora mostrada é a exata", 1, 8, 70)
-                    hoobler_type("hora em que o serviço foi terminado.", 1, 9, 70)
-                blt.refresh()
-                blt.delay(1000)
-                dialogo2()
-
-        elif key == blt.TK_5:
+        elif key == blt.TK_5 and cfg.game_state['viu_99'] == 1:
             blt.clear()
 
             import config as cfg
@@ -686,7 +611,7 @@ def dialogo2():
                 import config as cfg
                 cfg.game_state['manual_2'] = 1
 
-                blt.delay(1000)  #ERRO 223
+                blt.delay(1000) 
                 dialogo2()
 
         elif key == blt.TK_F4:
@@ -756,7 +681,7 @@ def hoobler():
     
     cfg.play_music('bgm/hoobler1.ogg', volume=0.9, loop=-1, crossfade_duration=100)
 
-    if cfg.game_state['trato_hoobler'] == 1:
+    if cfg.game_state['hoobler_menu'] == 1:
         dialogo2()
     else:
         blt.color('#7b7bf4')

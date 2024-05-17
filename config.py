@@ -83,13 +83,14 @@ def relogio(x, y):
         formatted_time = current_time.strftime("%I:%M:%S %p")
         blt.print(x, y, s=formatted_time)
 
-def ascii_art(file_path, x, y):
+def ascii_art(file_path, x, y, ansi):
     try:
         # Tenta ler o arquivo .txt como UTF-8
         with open(file_path, 'r', encoding="utf-8") as file:
             content = file.read()
             blt.printf(x, y, content)
-            blt.printf(x, y, " ")
+            if ansi == True:
+                blt.printf(x, y, " ")
     except UnicodeDecodeError:
         try:
             # se nao for UTF-8 tenta com ANSI

@@ -26,9 +26,9 @@ def logic():
         blt.clear()
 
         if cfg.game_state['current_language'] == 'en': 
-            cfg.ascii_art('res/desktop/manual1_en.txt', 3, 4)
+            cfg.ascii_art('res/desktop/manual1_en.txt', 3, 4, False)
         else:
-            cfg.ascii_art('res/desktop/manual1.txt', 3, 4)
+            cfg.ascii_art('res/desktop/manual1.txt', 3, 4, False)
         blt.print(3, 4, " ")
 
         language.get_localized_text('manual1', section='manual', color="#ffb000")
@@ -141,9 +141,9 @@ def logic2():
         blt.clear()
 
         if cfg.game_state['current_language'] == 'en': 
-            cfg.ascii_art('res/desktop/manual2_en.txt', 3, 4)
+            cfg.ascii_art('res/desktop/manual2_en.txt', 3, 4, False)
         else:
-            cfg.ascii_art('res/desktop/manual2.txt', 3, 4)
+            cfg.ascii_art('res/desktop/manual2.txt', 3, 4, False)
         blt.print(3, 4, " ")
 
         language.get_localized_text('manual1', section='manual', color="#ffb000")

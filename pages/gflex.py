@@ -11,7 +11,7 @@ def logic():
     while True:
         blt.color('#00b41b')  #010100
         blt.printf(6, 0, 'EGOTEXT   << 98 >>   SEGUNDA-FEIRA - 11 DE ABRIL, 1996  22:13h')
-        cfg.ascii_art('res/egotext/GFLEX.txt', 7, 7)
+        cfg.ascii_art('res/egotext/GFLEX.txt', 7, 7, False)
         blt.printf(7, 7,' ')
         blt.printf(12, 25,'Um oferecimento G-FLEX Etiquetas e Rótulos Adesivos.')
         blt.printf(24, 26,'www.gflexetiquetas.com.br')

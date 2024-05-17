@@ -14,7 +14,7 @@ def logic():
         language.get_localized_text('welcome5', section='egotext', color="#fffff8") 
         blt.printf(19, 0, '007')
 
-        cfg.ascii_art('res/egotext/james.txt', 1, 2)
+        cfg.ascii_art('res/egotext/james.txt', 1, 2, False)
 
         blt.color('#F5BD02') 
         blt.printf(2, 25, """

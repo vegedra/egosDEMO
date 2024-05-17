@@ -11,7 +11,7 @@ def olho():
 def logic():
     while True:
         blt.color('#f20505') 
-        cfg.ascii_art('res/egotext/olho1.txt', 5, 4)
+        cfg.ascii_art('res/egotext/olho1.txt', 5, 4, False)
         blt.printf(5, 4, '@')
 
         language.get_localized_text('welcome5', section='egotext', color="#f0e046") 

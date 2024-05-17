@@ -8,9 +8,9 @@ def credits():
     blt.color('#fff4e6')
         
     if cfg.game_state['current_language'] == 'en': 
-        cfg.ascii_art('res/credits_en.txt', 5, 3)
+        cfg.ascii_art('res/credits_en.txt', 5, 3, False)
     else:
-        cfg.ascii_art('res/credits.txt', 5, 3)    
+        cfg.ascii_art('res/credits.txt', 5, 3, False)    
     blt.print(5, 3, " ")   
  
     language.get_localized_text('credit1', section='credits', color="#ffb000")

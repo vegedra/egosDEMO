@@ -22,7 +22,7 @@ def logic():
         blt.printf(19, 0, '105')
         language.get_localized_text('esfinge_a1', section='egotext', color="#ffdc73") 
         import config as cfg
-        cfg.ascii_art('res/egotext/esfinge.txt', 12, 6)
+        cfg.ascii_art('res/egotext/esfinge.txt', 12, 6, False)
         blt.printf(12, 6, ' ')
 
         language.get_localized_text('esfinge_a2', section='egotext', color="#ffdc73") 
@@ -41,7 +41,7 @@ def logic():
                     blt.puts(24, 26, " " * 50)
                     blt.refresh()
                     blt.clear()
-                    cfg.ascii_art('res/egotext/esfinge.txt', 12, 6)
+                    cfg.ascii_art('res/egotext/esfinge.txt', 12, 6, True)
 
                     language.get_localized_text('esfinge_a3', section='egotext', color="#ffdc73") 
                     language.get_localized_text('esfinge_a4', section='egotext', color="#ffdc73") 

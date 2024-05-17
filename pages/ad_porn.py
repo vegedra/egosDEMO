@@ -12,11 +12,11 @@ def porn():
 def logic():
     while True:
         blt.color('pink') 
-        cfg.ascii_art('res/egotext/dama.txt', 1, 5)
+        cfg.ascii_art('res/egotext/dama.txt', 1, 5, False)
         blt.printf(1, 5, ' ')
 
         blt.color('yellow')
-        cfg.ascii_art('res/egotext/dama_tel.txt', 14, 27)
+        cfg.ascii_art('res/egotext/dama_tel.txt', 14, 27, False)
         blt.printf(14, 27, ' ')
         language.get_localized_text('welcome5', section='egotext', color="pink") 
 

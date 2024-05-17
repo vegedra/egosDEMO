@@ -18,9 +18,9 @@ def logic():
         blt.clear()
         blt.color('#FFB000')
         if cfg.game_state['current_language'] == 'en': 
-            cfg.ascii_art('res/desktop/desktop_en.txt', 5, 1)
+            cfg.ascii_art('res/desktop/desktop_en.txt', 5, 1, True)
         else:
-            cfg.ascii_art('res/desktop/desktop.txt', 5, 1)
+            cfg.ascii_art('res/desktop/desktop.txt', 5, 1, True)
 
         blt.print(5, 1, " ")
 

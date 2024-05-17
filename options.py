@@ -21,8 +21,8 @@ def logic():
         blt.color('#fff4e6')
         blt.bkcolor('black')
 
-        cfg.ascii_art('res/option.txt', 10, 3)
-        blt.print(8, 3, "    ") 
+        cfg.ascii_art('res/option.txt', 10, 3, True)
+        #blt.print(8, 3, "    ") 
 
         language.get_localized_text('opt1', section='options', color="#ffb000")
         language.get_localized_text('opt2', section='options')

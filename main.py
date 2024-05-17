@@ -47,7 +47,6 @@ while True:
     # Limpa a fila de input
     cfg.clear_input_queue()
 
-# DEBUG
 intro()
 
 # Musica usando o Mixer do Pygame
@@ -66,7 +65,7 @@ def main_menu():
     blt.color('#fff4e6')
 
     # Pega a arte do arquivo .txt e printa na tela
-    cfg.ascii_art('res/novo_menu.txt', 32, 3)
+    cfg.ascii_art('res/novo_menu.txt', 32, 3, True)
     # Vai ter que colocar esse print caso tenha caractere ANSI
     #blt.printf(32, 3, " ") nao sei se precisa, no pc da faculdade n aparece o simbolo estranho
     
@@ -118,9 +117,9 @@ def logic():
                 cfg.play_sound('sfx/sfx_tvOn.ogg', volume=0.5, loop = 0)
                     
                 if cfg.game_state['current_language'] == 'en': 
-                    cfg.ascii_art('res/menuFADE_en.txt', 1, 1)
+                    cfg.ascii_art('res/menuFADE_en.txt', 1, 1, True)
                 else:
-                    cfg.ascii_art('res/menuFADE.txt', 1, 1)
+                    cfg.ascii_art('res/menuFADE.txt', 1, 1, True)
                 
                 blt.print(1, 1, " ")
                 blt.print(1, 1, " ")
@@ -132,9 +131,9 @@ def logic():
                 blt.color('#171717')
 
                 if cfg.game_state['current_language'] == 'en': 
-                    cfg.ascii_art('res/menuFADE_en.txt', 1, 1)
+                    cfg.ascii_art('res/menuFADE_en.txt', 1, 1, True)
                 else:
-                    cfg.ascii_art('res/menuFADE.txt', 1, 1)
+                    cfg.ascii_art('res/menuFADE.txt', 1, 1, True)
 
                 blt.print(1, 1, " ")
                 blt.refresh()

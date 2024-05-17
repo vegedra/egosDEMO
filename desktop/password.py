@@ -15,7 +15,7 @@ def logic():
     while True:
         blt.clear()
 
-        cfg.ascii_art('res/password.txt', 15, 4)
+        cfg.ascii_art('res/password.txt', 15, 4, False)
         blt.print(2, 33, '<- VOLTAR PARA O DESKTOP')
         blt.printf(12, 1, '<< SEGUNDA-FEIRA - 11 DE ABRIL, 1996 /')
         blt.refresh()

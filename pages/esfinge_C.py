@@ -16,8 +16,7 @@ def logic():
         language.get_localized_text('welcome5', section='egotext', color="#ffdc73") 
         blt.printf(19, 0, '106')
 
-        cfg.ascii_art('res/egotext/esfinge_rosto.txt', 12, 6)
-        cfg.ascii_art('res/egotext/esfinge_rosto.txt', 12, 6)
+        cfg.ascii_art('res/egotext/esfinge_rosto.txt', 12, 6, True)
     
         language.get_localized_text('esfinge_c1', section='egotext', color="#ffdc73") 
         language.get_localized_text('esfinge_c2', section='egotext', color="#ffdc73") 

@@ -27,7 +27,7 @@ def intro():
     blt.clear()   
 
     # Pega a arte do arquivo .txt e printa na tela
-    cfg.ascii_art('res/digitalcakestudio.txt', 0, 0)
+    cfg.ascii_art('res/digitalcakestudio.txt', 0, 0, False)
     blt.refresh()
     blt.delay(3000)
     

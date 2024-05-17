@@ -24,7 +24,7 @@ def intro():
         # Animação da barra de loading com o logo da Relicorp em um .txt
         while current <= total:
             blt.clear()
-            cfg.ascii_art('res/logo_egocorp.txt', 4, 1)
+            cfg.ascii_art('res/logo_egocorp.txt', 4, 1, False)
             blt.printf(44, 1, '®️')
             blt.printf(45, 1, " ")
 

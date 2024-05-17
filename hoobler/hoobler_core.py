@@ -106,9 +106,11 @@ def player_type(message, x, y):
             blt.delay(100)
             index += 1
             x += 1
+            cfg.clear_input_queue()
 
             # Se o jogador apertou alguma tecla o número de vezes necessário para escrever 
             # a mensagem:
             if index == len(message):
                 finished = True
                 return
+        cfg.clear_input_queue()

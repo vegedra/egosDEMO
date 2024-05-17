@@ -12,7 +12,7 @@ def art():
 def logic():
     while True:
         blt.color('purple')
-        cfg.ascii_art('res/egotext/g_art_face.txt', 8, 2)
+        cfg.ascii_art('res/egotext/g_art_face.txt', 8, 2, True)
         blt.printf(8, 2, " ")
 
         blt.color('pink') 
