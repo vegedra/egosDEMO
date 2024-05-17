@@ -315,7 +315,7 @@ def dialogo5():
         hoobler_type("> Então.......", 1, 15, 70)
         hoobler_type("> Você aceita o trato?", 1, 16, 70)
     blt.refresh()
-    blt.delay(1000)
+    blt.delay(700)
     escolha2()
     
 def dialogo5_2():
@@ -631,26 +631,45 @@ def dialogo2():
             dialogo2()
 
         elif key == blt.TK_4:
-            tela_escrita(True, normal, 1, 18, 0)
-            
-            if cfg.game_state['current_language'] == 'en': 
-                player_type("Why is the time frozen inside EGOTEXT?", 1, 5)
-            else:
-                player_type("Por que a hora está parada no EGOTEXT?", 1, 5)
-            blt.delay(1000)
+            # Depois melhora pra n ter q duplicar codigo
+            if cfg.game_state['hoobler_menu'] == 1:
+                blt.clear()
 
-            blt.color('#7b7bf4')
-            if cfg.game_state['current_language'] == 'en': 
-                hoobler_type("> As the EGOTEXT system is no longer functional,", 1, 7, 70)
-                hoobler_type("the time shown is the same as the one when the", 1, 8, 70)
-                hoobler_type("servers were turned off.", 1, 9, 70)
+                import config as cfg
+                if cfg.game_state['enigma_pesquisa'] == 1:
+                    dialogo4()
+                if cfg.game_state['manual_2'] == 1:
+                    manual_changes()
+                    dialogo2()
+                else:
+                    arruma_manual()
+
+                    import config as cfg
+                    cfg.game_state['manual_2'] = 1
+
+                    blt.delay(1000)  #ERRO 223
+                    dialogo2()
             else:
-                hoobler_type("> Como o sistema EGOTEXT não está mais", 1, 7, 70)
-                hoobler_type("funcional, a hora mostrada é a exata", 1, 8, 70)
-                hoobler_type("hora em que o serviço foi terminado.", 1, 9, 70)
-            blt.refresh()
-            blt.delay(1000)
-            dialogo2()
+                tela_escrita(True, normal, 1, 18, 0)
+            
+                if cfg.game_state['current_language'] == 'en': 
+                    player_type("Why is the time frozen inside EGOTEXT?", 1, 5)
+                else:
+                    player_type("Por que a hora está parada no EGOTEXT?", 1, 5)
+                blt.delay(1000)
+
+                blt.color('#7b7bf4')
+                if cfg.game_state['current_language'] == 'en': 
+                    hoobler_type("> As the EGOTEXT system is no longer functional,", 1, 7, 70)
+                    hoobler_type("the time shown is the same as the one when the", 1, 8, 70)
+                    hoobler_type("servers were turned off.", 1, 9, 70)
+                else:
+                    hoobler_type("> Como o sistema EGOTEXT não está mais", 1, 7, 70)
+                    hoobler_type("funcional, a hora mostrada é a exata", 1, 8, 70)
+                    hoobler_type("hora em que o serviço foi terminado.", 1, 9, 70)
+                blt.refresh()
+                blt.delay(1000)
+                dialogo2()
 
         elif key == blt.TK_5:
             blt.clear()
