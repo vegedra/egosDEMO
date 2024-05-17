@@ -29,13 +29,13 @@ def toggle_fullscreen():
 
     if is_fullscreen:
         blt.set("window: fullscreen=true")
-        blt.refresh()
         
     else:
         blt.set("window: fullscreen=false")
-        blt.refresh()
 
-    blt.delay(10)
+    #blt.delay(10)
+    blt.refresh()
+    clear_input_queue()
     
 def clear_input_queue():
     # Clear the input queue

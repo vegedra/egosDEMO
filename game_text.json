@@ -157,7 +157,7 @@
 		"hoobler27": {"text": "Write something!", "x": 1, "y": 9},
 		"hoobler28": {"text": "> Oopsie, wrong choice!", "x": 1, "y": 7},
 		"hoobler29": {"text": "I accept, I'm counting on you.", "x": 1, "y": 3},
-		"hoobler30": {"text": "║ 4) Page 99     ║", "x": 12, "y": 10},
+		"hoobler30": {"text": "║ 4) Page 99       ║", "x": 12, "y": 10},
 		"hoobler31": {"text": "║ 2) Sphinx        ║", "x": 12, "y": 8},
 		"hoobler32": {"text": "║ 3) Time          ║", "x": 12, "y": 9}
 	  }

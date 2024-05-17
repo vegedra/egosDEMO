@@ -23,6 +23,7 @@ def sair():
         main()  
         
     elif key == blt.TK_F4:
+        # Nao ta funcionando direito, tem que refatorar todo o código
         cfg.play_sound('sfx/sound_menu_close.ogg', volume=0.5, loop = 0)
         from config import toggle_fullscreen
         toggle_fullscreen()
@@ -39,9 +40,9 @@ def dialogo_hora():
 
     blt.color('#7b7bf4')
     if cfg.game_state['current_language'] == 'en': 
-        hoobler_type("> As the EGOTEXT system is no longer functional,", 1, 7, 70)
-        hoobler_type("the time shown is the same as the one when the", 1, 8, 70)
-        hoobler_type("servers were turned off.", 1, 9, 70)
+        hoobler_type("> As the EGOTEXT system is no longer", 1, 7, 70)
+        hoobler_type("functional, the time shown is the same as", 1, 8, 70)
+        hoobler_type("the one when the servers were turned off.", 1, 9, 70)
     else:
         hoobler_type("> Como o sistema EGOTEXT não está mais", 1, 7, 70)
         hoobler_type("funcional, a hora mostrada é a exata", 1, 8, 70)
@@ -64,7 +65,7 @@ def dialogo_esfinge():
             
     if cfg.game_state['current_language'] == 'en':
         hoobler_type("> I don't know. I guess she's fine though.", 1, 7, 70)
-        hoobler_type("Probably an anomaly in the system, you know...", 1, 8, 70)
+        hoobler_type("Probably an anomaly in the system...", 1, 8, 70)
         hoobler_type("But I don't think she's a threat.", 1, 9, 70)
     else:
         hoobler_type("> Não sei dizer com precisão. Eu diria que", 1, 7, 70)
@@ -251,7 +252,7 @@ def escolha2():
             blt.puts(18, 0, " " * 20)
             blt.printf(22, 0, ';)')
             if cfg.game_state['current_language'] == 'en':
-                hoobler_type("I'm' not responsible for any damages caused.", 1, 12, 70)
+                hoobler_type("I'm not responsible for any damages caused.", 1, 12, 70)
             else:
                 hoobler_type("por quaisquer danos que possam ocorrer", 1, 12, 70)
                 hoobler_type("durante sua investigação. HA HA.", 1, 13, 70)
@@ -335,8 +336,8 @@ def dialogo5_2():
         hoobler_type("> BUT....", 1, 10, 70)
         hoobler_type("> I'm going to want something in return:", 1, 11, 70)
         hoobler_type("> I want you to free me from this machine. ", 1, 12, 70)
-        hoobler_type("> I know it's not 1996 anymore and I don't want to", 1, 13, 70)
-        hoobler_type("stay locked in here.", 1, 14, 70)
+        hoobler_type("> I know it's not 1996 anymore and I don't", 1, 13, 70)
+        hoobler_type("want to stay locked in here.", 1, 14, 70)
         blt.delay(500)
         hoobler_type("> So.......", 1, 15, 70)
         hoobler_type("> Do you accept the deal?", 1, 16, 70)
@@ -464,7 +465,7 @@ def dialogo3():
             tela_escrita(True, confused, 2, 20, 1)
 
             if cfg.game_state['current_language'] == 'en':
-                player_type("`Just curious.", 1, 10)
+                player_type("Just curious.", 1, 10)
             else:
                 player_type("Apenas alguém curioso.", 1, 10)
             blt.delay(1000)
@@ -713,10 +714,10 @@ def escolha1():
         blt.delay(1000)
         
         if cfg.game_state['current_language'] == 'en': 
-            hoobler_type("> Any type, I guess?", 1, 12, 90)
+            hoobler_type("> Any type, I guess.", 1, 12, 90)
             blt.delay(500)
             blt.printf(19, 0, happy)
-            hoobler_type("Ask me something!", 1, 13, 70)
+            hoobler_type("> Ask me something!", 1, 13, 70)
         else:
             blt.printf(19, 0, happy)
             hoobler_type("> Qualquer tipo! Se achar melhor, faça", 1, 12, 75)

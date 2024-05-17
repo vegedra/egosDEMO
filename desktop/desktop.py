@@ -129,13 +129,6 @@ def logic():
                 from exit_confirmation import main
                 cfg.clear_input_queue()
                 main()      
-                
-            # DEBUG
-            elif key == blt.TK_8:
-                cfg.play_sound('sfx/sound_menu_close.ogg', volume=0.5, loop = 0)
-                from hoobler.intro_hoobler import intro
-                cfg.clear_input_queue()
-                intro()
 
             else:
                 blt.clear()

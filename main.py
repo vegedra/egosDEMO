@@ -48,7 +48,7 @@ while True:
     cfg.clear_input_queue()
 
 # DEBUG
-#intro()
+intro()
 
 # Musica usando o Mixer do Pygame
 cfg.play_music('bgm/menu.ogg', volume=0.6, loop=-1, crossfade_duration=2000)
@@ -168,13 +168,6 @@ def logic():
                 blt.clear()
                 from options import options
                 options()
-            
-            # DEBUG
-            elif key == blt.TK_8:
-                cfg.play_sound('sfx/sound_menu_close.ogg', volume=0.5, loop = 0)
-                blt.clear()
-                from desktop.desktop import terminal
-                terminal()
 
             # Ativar a tela-cheia
             elif key == blt.TK_F4:
