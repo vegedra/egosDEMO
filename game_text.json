@@ -147,7 +147,7 @@
 		"hoobler17": {"text": "> Isn't that you?", "x": 1, "y": 7},
 		"hoobler18": {"text": "> Who are YOU?", "x": 1, "y": 8},
 		"hoobler19": {"text": "1) Police", "x": 14, "y": 11},
-		"hoobler20": {"text": "2) Just curious", "x": 14, "y": 12},
+		"hoobler20": {"text": "2) Just curious  ║", "x": 14, "y": 12},
 		"hoobler21": {"text": "║ 3) Don't matter  ║", "x": 12, "y": 13}, 
 		"hoobler22": {"text": "> Do you accept the deal?", "x": 1, "y": 7},
 		"hoobler23": {"text": "1) Yes", "x": 14, "y": 10},

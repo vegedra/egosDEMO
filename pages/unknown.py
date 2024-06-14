@@ -14,8 +14,8 @@ def logic():
     while True:
         blt.color('#FFF8E7') 
         language.get_localized_text('welcome5', section='egotext', color="#FFF8E7") 
-        blt.printf(20, 0, '999')
-        cfg.ascii_art('res/egotext/space.txt', 0, 2, False)
+        blt.printf(19, 0, '999')
+        cfg.ascii_art('res/egotext/space.txt', 0, 2, True)
         blt.refresh()
 
         if blt.has_input():

@@ -258,6 +258,7 @@ def escolha2():
         else:
             hoobler_type("por quaisquer danos que possam ocorrer", 1, 12, 70)
             hoobler_type("durante sua investigação. HA HA.", 1, 13, 70)
+        cfg.play_sound('sfx/giggle.ogg', volume=0.8, loop = 0)
         blt.refresh()
         blt.delay(2000)
         dialogo6()
@@ -467,7 +468,7 @@ def dialogo3():
             tela_escrita(True, confused, 2, 20, 1)
 
             if cfg.game_state['current_language'] == 'en':
-                player_type("Just curious.", 1, 10)
+                player_type("I'm just curious...", 1, 10)
             else:
                 player_type("Apenas alguém curioso.", 1, 10)
             blt.delay(1000)
