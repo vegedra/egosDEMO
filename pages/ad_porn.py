@@ -16,7 +16,7 @@ def logic():
         blt.printf(1, 5, ' ')
 
         blt.color('yellow')
-        cfg.ascii_art('res/egotext/dama_tel.txt', 14, 27, False)
+        cfg.ascii_art('res/egotext/dama_tel.txt', 6, 27, True)
         blt.printf(14, 27, ' ')
         language.get_localized_text('welcome5', section='egotext', color="pink") 
 
