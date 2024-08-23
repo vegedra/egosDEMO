@@ -138,7 +138,7 @@ def manual_arruma_final():
         if cfg.game_state['current_language'] == 'en':
             hoobler_type("> A tool that can be useful to you is", 1, 5, 70)
             hoobler_type("the EGO++. Take a look at the machine's", 1, 6, 70)
-            hoobler_type("> manual and look for the FIND command.", 1, 7, 70)
+            hoobler_type("manual and look for the FIND command.", 1, 7, 70)
         else:
             hoobler_type("> Uma ferramenta que pode lhe ser útil", 1, 5, 70)
             hoobler_type("é o EGO++. Olhe o manual da máquina.", 1, 6, 70)
@@ -264,17 +264,17 @@ def escolha2():
         dialogo6()
 
     elif key == blt.TK_2:
-            blt.clear()
-            blt.printf(22, 0, ';)') # Mostra o rosto de Hoobler armazenado na emoção dele no momento
-            language.get_localized_text('hoobler3', section='hoobler1', color="#7b7bf4")
+        blt.clear()
+        blt.printf(22, 0, ';)') # Mostra o rosto de Hoobler armazenado na emoção dele no momento
+        language.get_localized_text('hoobler3', section='hoobler1', color="#7b7bf4")
 
-            language.get_localized_text('hoobler16', section='hoobler1', color="#FFB000")
+        language.get_localized_text('hoobler16', section='hoobler1', color="#FFB000")
 
-            language.get_localized_text('hoobler28', section='hoobler1', color="#7b7bf4")
-            blt.refresh()
+        language.get_localized_text('hoobler28', section='hoobler1', color="#7b7bf4")
+        blt.refresh()
 
-            blt.delay(1000)
-            escolha2() 
+        blt.delay(1000)
+        escolha2() 
 
     elif key == blt.TK_F4:
         cfg.play_sound('sfx/sound_menu_close.ogg', volume=0.5, loop = 0)

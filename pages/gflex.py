@@ -9,7 +9,7 @@ def gflex():
 
 def logic():
     while True:
-        blt.color('#00b41b')  #010100
+        blt.color('#3ff14')  #010100
         blt.printf(6, 0, 'EGOTEXT   << 98 >>   SEGUNDA-FEIRA - 11 DE ABRIL, 1996  22:13h')
         cfg.ascii_art('res/egotext/GFLEX.txt', 7, 7, False)
         blt.printf(7, 7,' ')
