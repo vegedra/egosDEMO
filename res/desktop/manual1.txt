@@ -15,10 +15,10 @@ Pressione ESPAÇO para ativar a interface do terminal e digite CLOSE para fechar
                Exemplo: "OPEN EGOTEXT.EXE"
 
         CLOSE - Fecha a interface do EGO++;
-    
-        ILQG - Surfxud sru dutxlyrv d sduwlu gh xp qrph h rv deuh;
 
         HELP - Acessa o manual a partir de qualquer lugar do sistema.
+
+	ILQG - Surfxud sru dutxlyrv d sduwlu gh xp qrph h rv deuh;
 
 	ERRO ARQUIVO CORROMPIDO - PROCURAR POR ADMINISTRADOR DO SISTEMA
              

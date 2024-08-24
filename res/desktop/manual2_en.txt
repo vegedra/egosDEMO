@@ -15,15 +15,16 @@ Press SPACE to activate the terminal interface and type CLOSE to close it.
                Example: "OPEN EGOTEXT.EXE"
 
         CLOSE - Closes the EGO++ interface;
+
+	HELP - Accesses the manual from anywhere in the system.
     
         FIND - Searches for files on the machine based on a name and opens them.
                 Example: "FIND arquivo.txt"
                 
         OVERWRITE - Allows merging elements from one file into another.    
                 Example: "OVERWRITE arquivo1.txt arquivo2.txt"
-                
-        HELP - Accesses the manual from anywhere in the system.
-               
+           
+    
              01110010 01101111 01110000 01110010 01101001 01100101 
              01100100 01100001 01100100 01100101 01110011 00100000 
               
