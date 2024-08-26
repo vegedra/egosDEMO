@@ -16,7 +16,7 @@ Pressione ESPAÇO para ativar a interface do terminal e digite CLOSE para fechar
 
         CLOSE - Fecha a interface do EGO++;
 
-	HELP - Acessa o manual a partir de qualquer lugar do sistema.
+		HELP - Acessa o manual a partir de qualquer lugar do sistema.
     
         FIND - Procura por arquivos na máquina a partir de um nome e os abre.
                 Exemplo: "FIND arquivo.txt"
@@ -24,6 +24,5 @@ Pressione ESPAÇO para ativar a interface do terminal e digite CLOSE para fechar
         OVERWRITE - Permite mesclar elementos de um arquivo em outro.     
                 Exemplo: "OVERWRITE arquivo1.txt arquivo2.txt"
                
-             01110010 01101111 01110000 01110010 01101001 01100101 
-             01100100 01100001 01100100 01100101 01110011 00100000 
+
              

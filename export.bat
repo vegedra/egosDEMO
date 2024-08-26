@@ -1,2 +1,4 @@
 ﻿@echo off
-pyinstaller main.py --onefile --noconsole --icon=icon.ico --clean
+
+python setup.py build
+pause

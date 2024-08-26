@@ -18,9 +18,9 @@ Pressione ESPAÇO para ativar a interface do terminal e digite CLOSE para fechar
 
         HELP - Acessa o manual a partir de qualquer lugar do sistema.
 
-	ILQG - Surfxud sru dutxlyrv d sduwlu gh xp qrph h rv deuh;
+		ILQG - Surfxud sru dutxlyrv d sduwlu gh xp qrph h rv deuh;
 
-	ERRO ARQUIVO CORROMPIDO - PROCURAR POR ADMINISTRADOR DO SISTEMA
+		ERRO ARQUIVO CORROMPIDO - PROCURAR POR ADMINISTRADOR DO SISTEMA
              
              01110010 01101111 01110000 01110010 01101001 01100101 
              01100100 01100001 01100100 01100101 01110011 00100000 

@@ -4,11 +4,9 @@ import time
 import config as cfg
 import language
 
-cfg.play_music('bgm/egotext_loop1.ogg', volume=0.8, loop=-1, crossfade_duration=10)
-cfg.play_sound('bgm/computer_noise_loop.ogg', volume=0.2, loop=-1)
-
 def saudacao():
     blt.set(f"window.title='EGOTEXT'; window.size=75x35")
+    cfg.play_music('bgm/egotext_loop1.ogg', volume=0.8, loop=-1, crossfade_duration=20)
 
     logic()
 

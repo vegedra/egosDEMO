@@ -1,7 +1,12 @@
 from bearlibterminal import terminal as blt
+import config as cfg
+
+def clear_and_execute(function):
+    blt.clear()
+    cfg.clear_input_queue()
+    function()
 
 def match_pages():
-    import config as cfg
     blt.color('#d6945e')
 
     # Area que o jogador pode inserir a página que deseja ir
@@ -9,143 +14,35 @@ def match_pages():
     rc, pag = blt.read_str(2, 34, "", 3)
     blt.refresh()
 
-    match pag:
-        case "007":
-            from pages.bond import jamesbond
-            blt.clear()
-            cfg.clear_input_queue()
-            jamesbond()
+    pages = {
+        "007": lambda: clear_and_execute(__import__('pages.bond', fromlist=['']).jamesbond),
+        "42": lambda: clear_and_execute(__import__('pages.Hitchhiker', fromlist=['']).resposta),
+        "69": lambda: clear_and_execute(__import__('pages.sixtynine', fromlist=['']).meianove),
+        "98": lambda: clear_and_execute(__import__('pages.gflex', fromlist=['']).gflex),
+        "99": lambda: clear_and_execute(__import__('pages.unlock_B', fromlist=['']).erroo),
+        "100": lambda: (blt.color('white'), blt.bkcolor('black'), blt.refresh(), clear_and_execute(__import__('pages.welcome', fromlist=['']).saudacao)),
+        "101": lambda: (blt.color('white'), blt.bkcolor('black'), blt.refresh(), clear_and_execute(__import__('pages.weather', fromlist=['']).clima)),
+        "102": lambda: (blt.color('white'), blt.bkcolor('black'), blt.refresh(), clear_and_execute(__import__('pages.ad_filme', fromlist=['']).olho)),
+        "103": lambda: (blt.color('white'), blt.bkcolor('black'), blt.refresh(), clear_and_execute(__import__('pages.ad_porn', fromlist=['']).porn)),
+        "104": lambda: (blt.color('white'), blt.bkcolor('black'), blt.refresh(), clear_and_execute(__import__('pages.art_face', fromlist=['']).art)),
+        "105": lambda: (blt.color('white'), blt.bkcolor('black'), blt.refresh(), clear_and_execute(__import__('pages.esfinge_A', fromlist=['']).esfinge_A)),
+        "106": lambda: (
+            blt.color('white'), blt.bkcolor('black'), blt.refresh(), 
+            clear_and_execute(__import__('pages.esfinge_C', fromlist=['']).esfinge_C) if cfg.game_state['finaldemo'] == 1 else clear_and_execute(__import__('pages.error', fromlist=['']).erro)
+        ),
+        "505": lambda: clear_and_execute(__import__('pages.a_monkeys', fromlist=['']).arctic),
+        "666": lambda: clear_and_execute(__import__('pages.djabo', fromlist=['']).djabo),
+        "777": lambda: (
+            clear_and_execute(__import__('pages.troll', fromlist=['']).troll) if cfg.game_state['finaldemo'] == 1 else clear_and_execute(__import__('pages.error', fromlist=['']).erro)
+        ),
+        "999": lambda: clear_and_execute(__import__('pages.unknown', fromlist=['']).espaco)
+    }
 
-        case "42":
-            from pages.Hitchhiker import resposta
-            blt.clear()
-            cfg.clear_input_queue()
-            resposta()
-            
-        case "69":
-            from pages.sixtynine import meianove
-            blt.clear()
-            cfg.clear_input_queue()
-            meianove()
-            
-        case "98":
-            from pages.gflex import gflex
-            blt.clear()
-            cfg.clear_input_queue()
-            gflex()
-            
-        case "99":
-            from pages.unlock_B import erroo
-            blt.clear()
-            cfg.clear_input_queue()
-            erroo()
-
-        case "100":
-            blt.color('white')
-            blt.bkcolor('black')
-            blt.refresh()
-            from pages.welcome import saudacao
-            blt.clear()
-            cfg.clear_input_queue()
-            saudacao()
-
-        case "101":
-            blt.color('white')
-            blt.bkcolor('black')
-            blt.refresh()
-            from pages.weather import clima
-            blt.clear()
-            cfg.clear_input_queue()
-            clima()
-
-        case "102":
-            blt.color('white')
-            blt.bkcolor('black')
-            blt.refresh()
-            from pages.ad_filme import olho
-            blt.clear()
-            cfg.clear_input_queue()
-            olho()
-
-        case "103":
-            blt.color('white')
-            blt.bkcolor('black')
-            blt.refresh()
-            from pages.ad_porn import porn
-            blt.clear()
-            cfg.clear_input_queue()
-            porn()
-
-        case "104":
-            blt.color('white')
-            blt.bkcolor('black')
-            blt.refresh()
-            from pages.art_face import art
-            blt.clear()
-            cfg.clear_input_queue()
-            art()
-
-        case "105":
-            blt.color('white')
-            blt.bkcolor('black')
-            blt.refresh()
-            from pages.esfinge_A import esfinge_A
-            blt.clear()
-            cfg.clear_input_queue()
-            esfinge_A()           
-                
-               
-        case "106":
-            import config as cfg
-            if cfg.game_state['finaldemo'] == 1:
-                blt.color('white')
-                blt.bkcolor('black')
-                blt.refresh()
-                from pages.esfinge_C import esfinge_C
-                blt.clear()
-                cfg.clear_input_queue()
-                esfinge_C()  
-            else:
-                from pages.error import erro
-                blt.clear()
-                cfg.clear_input_queue()
-                erro()
-
-        case "505":
-            from pages.a_monkeys import arctic
-            blt.clear()
-            cfg.clear_input_queue()
-            arctic() 
-
-        case "666":
-            from pages.djabo import djabo
-            blt.clear()
-            cfg.clear_input_queue()
-            djabo() 
-            
-        case "777":
-            import config as cfg
-            if cfg.game_state['finaldemo'] == 1:
-                from pages.troll import troll
-                blt.clear()
-                cfg.clear_input_queue()
-                troll() 
-            else:
-                from pages.error import erro
-                blt.clear()
-                cfg.clear_input_queue()
-                erro()
-            
-        case "999":
-            from pages.unknown import espaco
-            blt.clear()
-            cfg.clear_input_queue()
-            espaco() 
-
-        case _:
-            from pages.error import erro
-            blt.clear()
-            cfg.clear_input_queue()
-            erro()
+    # Get the handler function from the dictionary, default to an error handler
+    handler = pages.get(pag, lambda: clear_and_execute(__import__('pages.error', fromlist=['']).erro))
+    try:
+        handler()
+    except Exception as e:
+        lambda: clear_and_execute(__import__('pages.error', fromlist=['']).erro)
 
 match_pages()
